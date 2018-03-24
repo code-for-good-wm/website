@@ -1,2 +1,2 @@
 # website
-Public facing website for Code For Good
+Public facing website for Code For Good.
