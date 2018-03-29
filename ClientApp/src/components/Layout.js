@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import { Col, Grid, Row } from 'react-bootstrap';
+import { MenuBar } from './MenuBar';
 
 export class Layout extends Component {
   displayName = Layout.name
 
   render() {
     return (
-      <Grid fluid>
-        <Row>
-          <Col sm={9}>
-            {this.props.children}
-          </Col>
-        </Row>
-      </Grid>
+      <div className="container">
+        <MenuBar />
+        <section className="main-content">{this.props.children}</section>
+      </div>
     );
   }
 }
