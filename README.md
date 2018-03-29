@@ -6,6 +6,9 @@ The code for http://codeforgoodwm.org/
 
 Use [Visual Studio Code](https://code.visualstudio.com)
 
+Install the DotNet platform (OSX Unix and Windows):  
+https://www.microsoft.com/net/learn/get-started
+
 Run Yarn Install to install client dependencies from the /ClientApp folder  
 ```> yarn install```
 
