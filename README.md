@@ -1,12 +1,12 @@
-# website
+# Code for Good West Michigan
 
-Public facing website for Code For Good.
+The code for http://codeforgoodwm.org/
 
 ## Coding the app
 
 Use [Visual Studio Code](https://code.visualstudio.com)
 
-Run Yarn Install to install client dependencies from the /ClientApp folder
+Run Yarn Install to install client dependencies from the /ClientApp folder  
 ```> yarn install```
 
 This project uses the React-Scripts setup:  
@@ -14,8 +14,8 @@ https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/
 
 ## Runing the app
 
-You can run the app by running this command from the /ClientApp folder
-```> yarn run start``
+You can run the app by running this command from the /ClientApp folder  
+```> yarn run start```
 
 ## Deploy to AWS Instructions
 
