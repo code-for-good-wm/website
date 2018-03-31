@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import './hero.css';
 
 export class Hero extends PureComponent {
     displayName = Hero.name

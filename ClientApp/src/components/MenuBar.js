@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Logo } from './Logo';
+import './menu-bar.css';
 
 export class MenuBar extends Component {
     displayName = MenuBar.name
