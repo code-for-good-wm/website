@@ -11,7 +11,7 @@ const baseConfig = {
       {
         test: /\.js$/,
         enforce: "pre",
-        loader: "eslint-loader"
+        loader: "eslint-loader",
       },
       {
         test: /\.scss$/,
@@ -24,29 +24,29 @@ const baseConfig = {
             },
           },
           {
-            loader: "sass-loader" // compiles Sass to CSS
-          }
-        ]
+            loader: "sass-loader", // compiles Sass to CSS
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader?name=img/[name].[ext]"]
+        use: ["file-loader?name=img/[name].[ext]"],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader?name=fonts/[name].[ext]"]
-      }
-    ]
+        use: ["file-loader?name=fonts/[name].[ext]"],
+      },
+    ],
   },
   resolve: {
-    extensions: [".js"]
+    extensions: [".js"],
   },
   output: {
     filename: "js/app.min.js",
     path: outputPath,
-    publicPath: "/"
+    publicPath: "/",
   },
-  plugins: [new ExtractCssPlugin({ filename: "css/site.min.css" })]
+  plugins: [new ExtractCssPlugin({ filename: "css/site.min.css" })],
 };
 
 const buildConfig = {
@@ -56,7 +56,7 @@ const buildConfig = {
   module: baseConfig.module,
   resolve: baseConfig.resolve,
   output: baseConfig.output,
-  plugins: baseConfig.plugins
+  plugins: baseConfig.plugins,
 };
 
 const devConfig = {
@@ -67,7 +67,7 @@ const devConfig = {
   resolve: baseConfig.resolve,
   output: baseConfig.output,
   performance: { hints: false },
-  plugins: baseConfig.plugins
+  plugins: baseConfig.plugins,
 };
 
 switch (process.env.npm_lifecycle_event) {
