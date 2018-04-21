@@ -29,6 +29,15 @@
     <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
+    @{
+        if (IsSectionDefined("nav")) {
+            // This hides the nav on the homepage
+            @RenderSection("nav", required: false)
+        }
+        else {
+            @await Html.PartialAsync("_Nav")
+        }
+    }
     @RenderBody()
     @RenderSection("Scripts", required: false)
 </body>
