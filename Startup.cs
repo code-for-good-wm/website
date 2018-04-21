@@ -21,7 +21,14 @@ namespace CodeForGood
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc()
+                .AddRazorPagesOptions(options => {
+                    options.Conventions.AddPageRoute("/codeofconduct", "code-of-conduct");
+                });
+
+            services.AddRouting(options => {
+                options.LowercaseUrls = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
