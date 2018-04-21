@@ -18,7 +18,10 @@ const baseConfig = {
         use: [
           ExtractCssPlugin.loader, // Extract CSS text
           {
-            loader: "css-loader" // translates CSS into CommonJS
+            loader: "css-loader", // translates CSS into CommonJS
+            options: {
+              minimize: true,
+            },
           },
           {
             loader: "sass-loader" // compiles Sass to CSS
