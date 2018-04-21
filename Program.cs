@@ -1,5 +1,12 @@
-﻿using Microsoft.AspNetCore;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace CodeForGood
 {
@@ -7,13 +14,12 @@ namespace CodeForGood
     {
         public static void Main(string[] args)
         {
-            var webApplication = WebHost
-                .CreateDefaultBuilder(args)
-                .UseSetting(WebHostDefaults.ApplicationKey, "code-for-good")
+            BuildWebHost(args).Run();
+        }
+
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
-
-            webApplication.Run();
-        }
     }
 }
