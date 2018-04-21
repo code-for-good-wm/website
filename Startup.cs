@@ -23,7 +23,8 @@ namespace CodeForGood
         {
             services.AddMvc()
                 .AddRazorPagesOptions(options => {
-                    options.Conventions.AddPageRoute("/codeofconduct", "code-of-conduct");
+                    // Customize URLS if needed
+                    //options.Conventions.AddPageRoute("/codeofconduct", "code-of-conduct");
                 });
 
             services.AddRouting(options => {
