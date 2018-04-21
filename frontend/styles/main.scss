@@ -1,3 +1,4 @@
 // This file is for including all other styles.
 // It will be pulled into the main script so webpack will handle SASS compilation
 @import "./core.scss";
+@import "~tent-css/src/tent.scss";
