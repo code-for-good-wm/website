@@ -39,6 +39,7 @@
         }
     }
     @RenderBody()
+    @await Html.PartialAsync("_Footer")
     @RenderSection("Scripts", required: false)
 </body>
 </html>
