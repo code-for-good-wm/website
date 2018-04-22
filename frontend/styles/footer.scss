@@ -1,47 +1,43 @@
 footer {
-    @extend .container;
-    color: $color-white;
-    text-align: center;
-    background-color: $color-brand-dark;
+  @extend .page-container;
+  color: $color-white;
+  text-align: center;
+  background-color: $color-brand-dark;
+  margin-top: 2rem;
 
-    a {
-        color: $color-white;
+  a {
+    @extend .inverse-link;
+  }
 
-        &:hover, &:focus, &:active {
-            color: $color-snow;
-            text-decoration: underline;
+  .nav-links {
+    list-style: none;
+
+    li {
+      display: inline;
+      padding: 0;
+      margin: 0;
+
+      &:not(:last-child) {
+        &:after {
+          display: inline-block;
+          padding: 0.5rem;
+          content: "|";
         }
+      }
     }
-    
-    .nav-links {
-        list-style: none;
+  }
 
-        li {
-            display: inline;
-            padding: 0;
-            margin: 0;
+  .shaded-block {
+    padding: 1.5rem;
+    background-color: $color-brand;
 
-            &:not(:last-child) {
-               &:after {
-                    display: inline-block;
-                    padding: 0.5rem;
-                    content: "|";
-                }
-            }
-        }
+    .tag-line {
+      text-transform: uppercase;
     }
 
-    .shaded-block {
-        padding: 1.5rem;
-        background-color: $color-brand;
-
-        .tag-line {
-            text-transform: uppercase;
-        }
-
-        .copyright {
-            margin-top: 1rem;
-            font-size: smaller;
-        }
+    .copyright {
+      margin-top: 1rem;
+      font-size: smaller;
     }
+  }
 }

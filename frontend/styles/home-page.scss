@@ -1,79 +1,114 @@
 #home-page {
-    @extend .container;
+  @extend .page-container;
 
-    header {
-        background-color: $color-brand-dark;
-        text-align: right;
-        height: 60px;
-    
-        .logo {
-            margin-left: 25px;
-            float: left;
-            text-align: center;
-            background-color: $color-white;
-            padding: 1rem;
-            width: 220px;
-            height: 167px;
-            box-shadow: 0px 0px 40.18px 8.82px rgba(0, 0, 0, 0.26);
-    
-            h1 {
-                margin: 0.5rem 0 0.1rem 0;  
-                text-transform: uppercase;  
-                font-size: 1.0rem;
-            }
-    
-            h2 {
-                margin: 0;
-                text-transform: uppercase;
-                font-size: 1.5rem;
-            }
-        }
-    
-        .menu-toggle {
-            display: inline-block;
-            margin: 1rem 25px;
-    
-            a {
-                font-size: 1.5rem;
-                text-transform: uppercase;
-                color: $color-white;
-            }
-        }
+  header {
+    background-color: $color-brand-dark;
+    text-align: right;
+    height: rem(60px);
+
+    .logo {
+      margin-left: rem(25px);
+      float: left;
+      text-align: center;
+      background-color: $color-white;
+      padding: 1rem;
+      width: rem(220px);
+      height: rem(167px);
+      box-shadow: 0 0 rem(40.18px) rem(8.82px) rgba(0, 0, 0, 0.26);
+
+      h1 {
+        margin: 0.5rem 0 0.05rem 0;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      h2 {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
     }
 
-    .hero {
-        background-image: url("/assets/hero-background.jpg");
-    
-        .hero-overlay {
-            background-color: rgba(110, 183, 172, 0.7);
-            height: 560px;
-            width: 100%;
-        }
-    
-        .cta-message {
-            float: right;
-            position: relative;
-            margin: 150px 4rem;
-            max-width: 500px;
-            text-align: center;
-    
-            h3 {
-                text-transform: uppercase;
-                font-size: 3rem;
-                font-weight: 900;
-                color: $color-white;
-            }
-        }
-    
-        .get-started-button {
-            @extend .button;
-            @extend .button--filled;
-            width: 300px;
-            height: 60px;
-            background-color: $color-brand-dark;
-            color: $color-white;
-            font-size: 1.75rem;
-            text-align: center;
-        }
+    .menu-toggle {
+      display: inline-block;
+      margin: 1rem 25px;
+
+      a {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: $color-white;
+      }
     }
+  }
+
+  .hero {
+    background-image: url("/assets/hero-background.jpg");
+
+    .hero-overlay {
+      background-color: rgba(110, 183, 172, 0.7);
+      height: rem(560px);
+      width: 100%;
+    }
+
+    .cta-message {
+      float: right;
+      position: relative;
+      margin: 150px 4rem;
+      max-width: 500px;
+      text-align: center;
+
+      h2 {
+        @extend .title;
+        @extend .title--xl;
+        text-transform: uppercase;
+        color: $color-white;
+      }
+    }
+
+    .get-started-button {
+      @extend .dark-button;
+      width: rem(300px);
+      height: rem(60px);
+      font-size: 1.75rem;
+    }
+  }
+
+  .copy-block {
+    @extend .lead;
+    padding: 2rem 3rem;
+
+    h2 {
+      @extend .title;
+      @extend .title--xxl;
+      text-align: center;
+    }
+  }
+
+  .what-is-code-for-good,
+  .what-is-weekend-for-good {
+    @extend .copy-block;
+  }
+
+  .learn-more-and-join-us {
+    @extend .lead;
+    padding: 2rem 0;
+    background-color: $color-brand;
+    color: $color-white;
+
+    h2 {
+      @extend .title;
+      @extend .title--xl;
+      text-align: center;
+      color: $color-white;
+    }
+
+    .action-button {
+      @extend .dark-button;
+      display: block;
+      font-size: 1rem;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+  }
 }
