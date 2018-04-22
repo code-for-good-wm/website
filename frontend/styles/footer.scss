@@ -1,18 +1,49 @@
 @import "_colors";
+@import "_fonts";
 @import "~tent-css/src/tent.scss";
 
 footer {
     @extend .container;
-    
-    .tag-line {
-        text-align: center;
-        text-transform: uppercase;
-        padding: 3rem;
-        background-color: $color-brand;
+    color: $color-white;
+    text-align: center;
+    background-color: $color-brand-dark;
+
+    a {
         color: $color-white;
+
+        &:hover, &:focus, &:active {
+            color: $color-snow;
+            text-decoration: underline;
+        }
+    }
+    
+    .nav-links {
+        list-style: none;
+
+        li {
+            display: inline;
+
+            &:not(:last-child) {
+               &:after {
+                    display: inline-block;
+                    padding: 0.5rem;
+                    content: "|";
+                }
+            }
+        }
+    }
+
+    .shaded-block {
+        padding: 1.5rem;
+        background-color: $color-brand;
+
+        .tag-line {
+            text-transform: uppercase;
+        }
 
         .copyright {
             margin-top: 1rem;
+            font-size: smaller;
         }
     }
 }

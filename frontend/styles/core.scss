@@ -1,1 +1,6 @@
 // Declare app-level styles and variables here
+@import "_fonts";
+
+html {
+    font-family: $custom-font;
+}
