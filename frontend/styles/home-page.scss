@@ -1,7 +1,7 @@
 #home-page {
     @extend .container;
 
-    .menu-bar {
+    header {
         background-color: $color-brand-dark;
         text-align: right;
         height: 60px;
@@ -19,7 +19,7 @@
             h1 {
                 margin: 0.5rem 0 0.1rem 0;  
                 text-transform: uppercase;  
-                font-size: 2.0rem;
+                font-size: 1.0rem;
             }
     
             h2 {
@@ -45,7 +45,7 @@
         background-image: url("/assets/hero-background.jpg");
     
         .hero-overlay {
-            background-color:  rgba(110, 183, 172, 0.7);
+            background-color: rgba(110, 183, 172, 0.7);
             height: 560px;
             width: 100%;
         }
@@ -65,7 +65,9 @@
             }
         }
     
-        .cta-button {
+        .get-started-button {
+            @extend .button;
+            @extend .button--filled;
             width: 300px;
             height: 60px;
             background-color: $color-brand-dark;

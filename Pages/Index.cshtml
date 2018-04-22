@@ -7,7 +7,7 @@
     @* This hides the nav on the home page *@
 }
 <div id="home-page">
-    <header class"menu-bar">
+    <header>
         <div class="logo">
             <img src="/assets/logo.png" alt="Code for Good West Michigan" />
             <h1>Code for Good</h1>
@@ -15,6 +15,14 @@
         </div>
         @await Html.PartialAsync("_Menu")
     </header>
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="cta-message">
+                <h3>Proudly giving to those who give!</h3>
+                <a class="get-started-button">Get Started</a>
+            </div>
+        </div>
+    </section>
     <section class="content">
         <h2>What is Code for Good?</h2>
         <p>We’re a volunteer-run collective of technology professionals in Grand Rapids, Michigan, dedicated to creating tech solutions for non-profit agencies. Our primary event is Weekend for Good in November, but we are involved with projects all year long. Interested in joining us? We’d love to hear from you.</p>
