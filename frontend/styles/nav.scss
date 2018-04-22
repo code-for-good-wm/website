@@ -1,6 +1,8 @@
+$navbar-height: rem(50px);
+
 nav {
   background-color: $color-brand-dark;
-  height: 50px;
+  height: $navbar-height;
 
   .logo {
     margin-top: 0.25rem;
@@ -20,10 +22,11 @@ nav {
       text-transform: uppercase;
       font-size: 1rem;
       color: $color-white;
+      margin: 0.25rem 2rem 0.1rem 0;
     }
 
     h2 {
-      margin: 0;
+      margin: 0 0 0.25rem 0;
       text-transform: uppercase;
       font-size: 0.8rem;
       color: $color-white;
@@ -31,13 +34,42 @@ nav {
   }
 
   .menu-toggle {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
     display: inline-block;
-    margin: 1rem rem(25px);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: $color-white;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    float: right;
+    right: 0;
+    top: $navbar-height;
+    z-index: 250;
+
+    &.active-menu {
+      display: block;
+    }
 
     a {
-      font-size: 1.5rem;
-      text-transform: uppercase;
+      float: none;
+      width: rem(250px);
+      display: block;
+      text-align: left;
+      background-color: $color-brand-dark;
       color: $color-white;
+      padding: 0.5rem 1rem;
+      border-top: 1px solid $color-brand;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $color-brand;
+      }
     }
   }
 }

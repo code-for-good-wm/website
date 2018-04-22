@@ -1,7 +1,10 @@
 <nav>
-    <img class="logo" src="/assets/logo.png" alt="Code for Good West Michigan" />
-    <div class="site-identity">
-        <h1>Code for Good</h1>
-        <h2>West Michigan</h2>
-    </div>
+    <a href="/" title="Return to Home Page">
+        <img class="logo" src="/assets/logo.png" alt="Code for Good West Michigan" />
+        <div class="site-identity">
+            <h1>Code for Good</h1>
+            <h2>West Michigan</h2>
+        </div>
+    </a>
+    @await Html.PartialAsync("_Menu")
 </nav>

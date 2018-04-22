@@ -1,10 +1,11 @@
+$utilitybar-height: rem(60px);
+
 #home-page {
   @extend .page-container;
 
   header {
     background-color: $color-brand-dark;
-    text-align: right;
-    height: rem(60px);
+    height: $utilitybar-height;
 
     .logo {
       margin-left: rem(25px);
@@ -31,14 +32,17 @@
     }
 
     .menu-toggle {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
       display: inline-block;
-      margin: 1rem 25px;
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      color: $color-white;
+    }
 
-      a {
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        color: $color-white;
-      }
+    .menu {
+      top: $utilitybar-height;
     }
   }
 

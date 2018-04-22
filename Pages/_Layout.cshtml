@@ -27,6 +27,7 @@
     <meta name="theme-color" content="#394159">
     <link rel="manifest" href="/manifest.json">
     <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
 </head>
 <body>
@@ -41,6 +42,7 @@
     }
     @RenderBody()
     @await Html.PartialAsync("_Footer")
+    <script src="~/js/app.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

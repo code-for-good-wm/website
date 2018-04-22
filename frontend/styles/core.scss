@@ -9,6 +9,7 @@ html {
 
 .page-container {
   @extend .container;
+  clear: both;
 }
 
 .link-button {

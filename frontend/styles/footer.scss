@@ -9,6 +9,20 @@ footer {
     @extend .inverse-link;
   }
 
+  .social-links {
+    list-style: none;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      padding: 1.5rem 2rem 0.5rem;
+
+      .fab {
+        font-size: xx-large;
+      }
+    }
+  }
+
   .nav-links {
     list-style: none;
 
@@ -33,6 +47,10 @@ footer {
 
     .tag-line {
       text-transform: uppercase;
+
+      .heart-icon {
+        color: $color-brand-dark;
+      }
     }
 
     .copyright {
