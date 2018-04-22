@@ -1,7 +1,3 @@
-@import "_colors";
-@import "_fonts";
-@import "~tent-css/src/tent.scss";
-
 footer {
     @extend .container;
     color: $color-white;
