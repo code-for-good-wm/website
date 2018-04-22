@@ -13,13 +13,7 @@
             <h1>Code for Good</h1>
             <h2>West Michigan</h2>
         </div>
-        <nav class="menu-toggle">
-            <a asp-page="./about">About</a>
-            <a asp-page="./schedule">Schedule</a>
-            <a asp-page="./code-of-conduct">Code of Conduct</a>
-            <a asp-page="./Nonprofit-Agencies">Non-Profit Agencies</a>
-            <a asp-page="./Volunteer">Volunteers</a>
-        </nav>
+        @await Html.PartialAsync("_Menu")
     </header>
     <section class="hero">
         <div class="hero-overlay">
@@ -54,3 +48,6 @@
         </div>
     </section>
 </div>
+@section Scripts {
+    <script src="~/js/app.min.js"></script>
+}

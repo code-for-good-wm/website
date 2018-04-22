@@ -2,7 +2,7 @@
 // It will be pulled into the main script so webpack will handle SASS compilation
 @import "./core.scss";
 
+@import "./home-page";
+@import "./menu";
 @import "./nav";
 @import "./footer";
-
-@import "./home-page";
