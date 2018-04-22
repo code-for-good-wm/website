@@ -13,8 +13,7 @@ html {
 }
 
 .link-button {
-  @extend .button;
-  @extend .button--filled;
+  @extend .button, .button--filled;
   cursor: pointer;
   text-align: center;
 }

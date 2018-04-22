@@ -63,8 +63,7 @@ $utilitybar-height: rem(60px);
       text-align: center;
 
       h2 {
-        @extend .title;
-        @extend .title--xl;
+        @extend .title, .title--xl;
         text-transform: uppercase;
         color: $color-white;
       }
@@ -95,7 +94,7 @@ $utilitybar-height: rem(60px);
   }
 
   .learn-more-and-join-us {
-    @extend .lead;
+    @extend .lead, .grid, .grid--center;
     padding: 2rem 0;
     background-color: $color-brand;
     color: $color-white;
@@ -105,6 +104,10 @@ $utilitybar-height: rem(60px);
       @extend .title--xl;
       text-align: center;
       color: $color-white;
+    }
+
+    .block {
+      @extend .grid__column, .grid__column--12, .grid__column--4--md;
     }
 
     .action-button {

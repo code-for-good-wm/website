@@ -2,10 +2,11 @@
 // It will be pulled into the main script so webpack will handle SASS compilation
 @import "./core.scss";
 
-@import "./menu";
+// Shared components
 @import "./nav";
 @import "./footer";
 
+// Page specific styles
 @import "./home-page";
 @import "./about";
 @import "./schedule";
