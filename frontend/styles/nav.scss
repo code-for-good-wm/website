@@ -42,6 +42,7 @@ nav {
     text-transform: uppercase;
     color: $color-white;
     cursor: pointer;
+    user-select: none;
   }
 
   .menu {

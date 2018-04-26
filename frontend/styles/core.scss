@@ -3,7 +3,8 @@
 @import "_colors";
 @import "_fonts";
 
-html {
+body {
+  @extend body;
   font-family: $custom-font;
 }
 
