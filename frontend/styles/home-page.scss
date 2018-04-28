@@ -88,7 +88,26 @@ $utilitybar-height: rem(60px);
     }
   }
 
-  .what-is-code-for-good,
+  .what-is-code-for-good {
+    @extend .grid;
+    margin-top: 2rem;
+
+    .block:first-child {
+      @extend .grid__column, .grid__column--12, .grid__column--8--md;
+      background-color: $bg-color-light;
+      padding: 2rem;
+
+      h2 {
+        @extend .type-bold;
+      }
+    }
+
+    .block:last-child {
+      @extend .grid__column, .grid__column--12, .grid__column--4--md;
+      background-color: $bg-color-medium;
+    }
+  }
+
   .what-is-weekend-for-good {
     @extend .copy-block;
   }

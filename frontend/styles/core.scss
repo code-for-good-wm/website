@@ -3,11 +3,6 @@
 @import "_colors";
 @import "_fonts";
 
-body {
-  @extend body;
-  font-family: $custom-font;
-}
-
 .page-container {
   @extend .container;
   clear: both;
