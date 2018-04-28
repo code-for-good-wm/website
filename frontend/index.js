@@ -2,7 +2,7 @@
 // eslint-disable-next-line
 import { toggleClass } from "./js/class";
 
-window.onload = function() {
+window.onload = () => {
   var menuToggle = document.getElementById("menu-toggle");
   var menu = document.getElementById("menu");
   var menuOpen = false;
@@ -11,13 +11,13 @@ window.onload = function() {
     menuOpen = !menuOpen;
     menu.setAttribute("aria-expanded", menuOpen);
   }
-  menuToggle.addEventListener("click", function() {
+  menuToggle.addEventListener("click", e => {
     toggleMenu();
   });
   document.body.addEventListener(
     "click",
-    function() {
-      if (menuOpen) {
+    e => {
+      if (menuOpen && e.target !== menuToggle) {
         toggleMenu();
       }
     },

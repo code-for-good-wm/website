@@ -3,138 +3,97 @@ $utilitybar-height: rem(60px);
 #home-page {
   @extend .page-container;
 
-  header {
-    background-color: $color-brand-dark;
-    height: $utilitybar-height;
-
-    .logo {
-      margin-left: rem(25px);
-      float: left;
-      text-align: center;
-      background-color: $color-white;
-      padding: 1rem;
-      width: rem(220px);
-      height: rem(167px);
-      box-shadow: 0 0 rem(40.18px) rem(8.82px) rgba(0, 0, 0, 0.26);
-
-      h1 {
-        margin: 0.5rem 0 0.05rem 0;
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        font-weight: 700;
-      }
-
-      h2 {
-        margin: 0;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-      }
-    }
-
-    .menu-toggle {
-      position: absolute;
-      top: 0.5rem;
-      right: 1rem;
-      display: inline-block;
-      font-size: 1.75rem;
-      text-transform: uppercase;
-      color: $color-white;
-    }
-
-    .menu {
-      top: $utilitybar-height;
-    }
-  }
-
   .hero {
-    background-image: url("/assets/hero-background.jpg");
+    //background-image: url("/assets/hero-background.jpg");
 
     .hero-overlay {
       background-color: rgba(110, 183, 172, 0.7);
-      height: rem(560px);
+      height: rem(420px);
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .cta-message {
-      float: right;
-      position: relative;
-      margin: 150px 4rem;
-      max-width: 500px;
+      max-width: rem(440px);
       text-align: center;
 
       h2 {
-        @extend .title, .title--xl;
+        font-size: 2.4rem;
         text-transform: uppercase;
         color: $color-white;
       }
     }
 
-    .get-started-button {
+    .join-us-button {
       @extend .dark-button;
-      width: rem(300px);
-      height: rem(60px);
-      font-size: 1.75rem;
+      width: rem(220px);
+      font-size: 1.2rem;
     }
   }
 
-  .copy-block {
-    @extend .lead;
-    padding: 2rem 3rem;
+  .what-is-code-for-good,
+  .what-is-weekend-for-good {
+    margin: 2rem;
+
+    .wrapper {
+      @extend .grid;
+    }
 
     h2 {
-      @extend .title;
-      @extend .title--xxl;
-      text-align: center;
+      @extend .type-bold;
+      font-size: 1.8rem;
     }
-  }
 
-  .what-is-code-for-good {
-    @extend .grid;
-    margin-top: 2rem;
-
-    .block:first-child {
-      @extend .grid__column, .grid__column--12, .grid__column--8--md;
-      background-color: $bg-color-light;
+    .button-block,
+    .text-block {
+      @extend .grid__column, .grid__column--12;
       padding: 2rem;
+    }
 
-      h2 {
-        @extend .type-bold;
+    .button-block {
+      @extend .grid__column--4--md;
+      background-color: $bg-color-medium;
+      text-align: center;
+      position: relative;
+
+      .heart-icon {
+        color: $bg-color-dark;
+        font-size: 8rem;
+        position: relative;
+        top: calc(50% - 8rem);
+      }
+
+      .call-out-text-over-heart {
+        position: absolute;
+        top: calc(50% - 4rem);
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $color-white;
+        z-index: 250;
+        margin: 0 3rem;
+      }
+
+      .button {
+        @extend .dark-button;
+        width: rem(220px);
       }
     }
 
-    .block:last-child {
-      @extend .grid__column, .grid__column--12, .grid__column--4--md;
-      background-color: $bg-color-medium;
+    .text-block {
+      @extend .grid__column--8--md;
+      background-color: $bg-color-light;
+
+      a {
+        @extend .link-medium;
+      }
     }
   }
 
-  .what-is-weekend-for-good {
-    @extend .copy-block;
-  }
-
-  .learn-more-and-join-us {
-    @extend .lead, .grid, .grid--center;
-    padding: 2rem 0;
-    background-color: $color-brand;
-    color: $color-white;
-
-    h2 {
-      @extend .title;
-      @extend .title--xl;
-      text-align: center;
-      color: $color-white;
-    }
-
-    .block {
-      @extend .grid__column, .grid__column--12, .grid__column--4--md;
-    }
-
-    .action-button {
-      @extend .dark-button;
-      display: block;
-      font-size: 1rem;
-      padding: 1rem;
-      margin-top: 1.5rem;
+  .working-together {
+    img {
+      width: 100%;
     }
   }
 }

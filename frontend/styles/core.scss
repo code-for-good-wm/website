@@ -3,6 +3,10 @@
 @import "_colors";
 @import "_fonts";
 
+.page-container-fluid {
+  @extend .container--fluid;
+}
+
 .page-container {
   @extend .container;
   clear: both;
@@ -28,13 +32,23 @@
 
 .link {
   color: $color-brand-dark;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover,
   &:focus,
   &:active {
     color: $color-brand;
-    text-decoration: underline;
+  }
+}
+
+.link-medium {
+  @extend .link;
+  color: $bg-color-medium;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-brand;
   }
 }
 

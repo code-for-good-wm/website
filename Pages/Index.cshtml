@@ -3,53 +3,45 @@
 @{
     ViewData["Title"] = "Home page";
 }
-@section nav {
-    @* This hides the nav on the home page *@
-}
+
 <div id="home-page">
-    <header>
-        <div class="logo">
-            <img src="/assets/logo.png" alt="Code for Good West Michigan" />
-            <h1>Code for Good</h1>
-            <h2>West Michigan</h2>
-        </div>
-        @await Html.PartialAsync("_Menu")
-    </header>
     <section class="hero">
         <div class="hero-overlay">
             <div class="cta-message">
                 <h2>Proudly giving to those who give!</h2>
-                <a class="get-started-button">Get Started</a>
+                <a class="join-us-button">Join Us</a>
             </div>
         </div>
     </section> 
     <section class="content">
         <div class="what-is-code-for-good">
-            <div class="block">
-                <h2>What is Code for Good?</h2>
-                <p>We’re a volunteer-run collective of technology professionals in Grand Rapids, Michigan, dedicated to creating tech solutions for non-profit agencies. Our primary event is <strong>Weekend for Good</strong> in November, but we are involved with projects all year long. Interested in joining us? We’d love to hear from you.</p>
+            <div class="wrapper">
+                <div class="text-block">
+                    <h2>What is Code for Good?</h2>
+                    <p>We’re a volunteer-run collective of technology professionals in Grand Rapids, Michigan, dedicated to creating tech solutions for non-profit agencies. Our primary event is <strong>Weekend for Good</strong> in November, but we are involved with projects all year long. Want to help? <a asp-page="./volunteer">Let us know!</a>
+                    </p>
+                </div>
+                <div class="button-block">
+                    <span class="heart-icon" title="love"><i class="fas fa-heart"></i></span>
+                    <div class="call-out-text-over-heart">Can you help my non-profit?</div>
+                    <a class="button" href="/apply">Apply</a>
+                </div>
             </div>
-            <div class="block">
-                <div class="call-out-text-over-heart">Can you help my non-profit?</div>
-                <a class="apply-button" href="/apply">Apply</a>
-            </div>
+        </div>
+        <div class="working-together">
+            <img src="~/assets/working-together.jpg" alt="Working Together" />
         </div>
         <div class="what-is-weekend-for-good">
-            <h2>What Is Weekend for Good?</h2>
-            <p>Weekend for Good is the ripple effect in action: it’s a weekend-long event of technology and design volunteers donating their time, creating custom technology tools and solutions for non-profit agencies. In turn, those agencies create meaningful change here in Grand Rapids and around the globe.</p>
-            <p>Web developers, designers, and strategists work together to amplify each non-profit’s mission, supporting the ever-widening reach of agencies’ good work.</p>
-        </div>
-        <div class="learn-more-and-join-us">
-            <div class="block">
-                Your agency uplifts others; Code for Good wants to help you do your good work well.
-                <a class="action-button">How can we help you?</a>
-            </div>
-            <div class="block">
-                <h2>Learn More + Join Us</h2>
-            </div>
-            <div class="block">
-                Share your talents and time with non-profits who do so much for so many.
-                <a class="action-button">Learn about volunteering</a>
+            <div class="wrapper">
+                <div class="button-block">
+                    <span class="heart-icon" title="love"><i class="fas fa-heart"></i></span>
+                    <div class="call-out-text-over-heart">I want to donate my time!</div>
+                    <a class="button" href="/volunteer">Volunteer</a>
+                </div>
+                <div class="text-block">
+                    <h2>Ok, What's Weekend for Good?</h2>
+                    <p>On <strong>November 2-4 2018</strong>, volunteers who are experts in software development, design and other fields donate their time to non-profits, creating custom software to further their charitable missions. In turn, those non-profits create meaningful change here in Grand Rapids and around the globe.</p>
+                </div>
             </div>
         </div>
     </section>
