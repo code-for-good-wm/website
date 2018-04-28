@@ -42,7 +42,7 @@
     }
     @RenderBody()
     @await Html.PartialAsync("_Footer")
-    <script src="~/js/app.min.js"></script>
+    <script src="~/js/app.min.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
