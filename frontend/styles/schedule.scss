@@ -1,3 +1,51 @@
 #schedule-page {
   @extend .page-container;
+  position: relative;
+  background-color: $bg-color-medium;
+  color: $color-white;
+  padding: 6rem;
+  margin-bottom: -2rem;
+
+  .circuit-left {
+    position: absolute;
+    max-height: 150px;
+    left: -50px;
+    bottom: -10px;
+    z-index: 250;
+  }
+
+  .circuit-right {
+    position: absolute;
+    max-height: 150px;
+    right: -50px;
+    bottom: -10px;
+    z-index: 250;
+    transform: rotate(0.5turn);
+  }
+
+  h1 {
+    @extend .type-bold;
+    color: $color-white;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  h2 {
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+    font-size: 2.5rem;
+  }
+
+  p {
+    @extend .lead, .type-bold;
+  }
+
+  .action-buttons {
+    text-align: center;
+
+    .button {
+      @extend .dark-button;
+    }
+  }
 }
