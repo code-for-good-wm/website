@@ -2,7 +2,7 @@ $navbar-height: rem(60px);
 
 nav {
   @extend .page-container-fluid;
-  max-width: 57rem;
+  max-width: 80rem;
   margin: 0 auto;
   position: relative;
   background-color: $color-brand-dark;
@@ -53,6 +53,7 @@ nav {
 
     .menu-toggle-icon {
       display: none;
+      line-height: 0;
     }
 
     &:hover {
