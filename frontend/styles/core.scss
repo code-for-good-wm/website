@@ -21,8 +21,9 @@ body {
 
 .page-container {
   @extend .container;
+  max-width: 57rem;
   clear: both;
-  @media (min-width: 28.8em) {
+  @media (max-width: 57rem) {
     max-width: none;
   }
 }
