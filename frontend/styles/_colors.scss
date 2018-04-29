@@ -1,12 +1,20 @@
 $color-white: #ffffff;
 $color-snow: #fffafa;
 
-$color-brand-dark: #383d59;
-$color-brand: #51a596;
+$color-brand-dark: #3b4061;
+$color-brand-dark-hover: #6c5e7d;
 
-$color-brand-accent: #78bfb8;
-$color-accent: #c8ed40;
+$color-brand: #53b9aa;
+$color-brand-hover: #00958f;
 
-$bg-color-light: #e7f3f3;
-$bg-color-medium: #54b9a9;
-$bg-color-dark: #009690;
+$color-brand-accent: #7cced2;
+$color-brand-accent-hover: #29a6b0;
+
+$color-value-5: #faffff;
+$color-value-4: #e7f3f3;
+$color-value-3: #c5c6cf;
+$color-value-2: #757687;
+$color-value-1: #111a36;
+
+$bg-color-light: $color-value-4;
+$bg-color-medium: $color-brand;
