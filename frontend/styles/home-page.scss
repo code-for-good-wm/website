@@ -34,10 +34,9 @@ $utilitybar-height: rem(60px);
 
   .what-is-code-for-good,
   .what-is-weekend-for-good {
-    margin: 2rem 0;
-
     .wrapper {
-      @extend .grid;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     h2 {
@@ -45,37 +44,30 @@ $utilitybar-height: rem(60px);
       font-size: 1.8rem;
     }
 
-    .button-block,
-    .text-block {
-      @extend .grid__column, .grid__column--12;
-      padding: 3rem;
-    }
-
     .button-block {
-      @extend .grid__column--4--md;
+      margin-top: 2rem;
+      flex: 1;
+      min-width: 325px;
+      padding: 2rem;
       background-color: $bg-color-medium;
       position: relative;
-      min-height: rem(240px);
+      min-height: 18rem;
 
       .heart-stack {
         display: flex;
-        flex-flow: wrap;
+        min-height: 10rem;
         align-items: center;
         justify-content: center;
-        position: relative;
-
-        img {
-          align-self: center;
-          max-height: rem(150px);
-          z-index: 249;
-        }
+        background-image: url("/assets/seafoam_heart.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 10rem;
 
         .call-out-text-over-heart {
-          position: absolute;
-          max-width: rem(150px);
+          margin: 0rem auto;
           font-size: 1.5rem;
           font-weight: 700;
-          color: $color-white;
+          color: $color-white-font;
           z-index: 250;
           text-align: center;
         }
@@ -84,14 +76,17 @@ $utilitybar-height: rem(60px);
       .button {
         @extend .dark-button;
         position: absolute;
-        bottom: 0;
-        left: 10%;
-        width: 80%;
+        bottom: 2rem;
+        left: 3rem;
+        right: 3rem;
       }
     }
 
     .text-block {
-      @extend .grid__column--8--md;
+      margin-top: 2rem;
+      flex: 2;
+      padding: 3rem;
+      min-width: 325px;
       background-color: $bg-color-light;
 
       a {
@@ -101,6 +96,7 @@ $utilitybar-height: rem(60px);
   }
 
   .working-together {
+    margin-top: 2rem;
     img {
       width: 100%;
     }
