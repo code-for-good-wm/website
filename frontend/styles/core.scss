@@ -5,10 +5,23 @@ $scale-unit: 20;
 @import "_colors";
 @import "_fonts";
 
+
+html {
+  background-color: $color-brand-dark;
+}
+
+body {
+  @extend body;
+  background-color: #faffff;
+}
+
 html, body {
   font-family: $font-family-primary;
   font-size: 20px;
   color: $color-brand-dark;
+  @media(max-width: 500px) {
+    font-size: 18px;
+  }
 }
 
 .page-container-fluid {
@@ -17,6 +30,7 @@ html, body {
 
 .page-container {
   @extend .container;
+  max-width: 80rem;
   clear: both;
 }
 
@@ -30,11 +44,14 @@ html, body {
   @extend .link-button;
   background-color: $color-brand-dark;
   color: $color-white;
+  border: none;
+  transition: background-color 125ms;
+  font-size: 1rem;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: $color-brand;
+    background-color: $color-brand-dark-hover;
   }
 }
 
@@ -45,7 +62,7 @@ html, body {
   &:hover,
   &:focus,
   &:active {
-    color: $color-brand;
+    color: $color-brand-dark-hover;
   }
 }
 
