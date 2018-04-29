@@ -29,13 +29,12 @@ $utilitybar-height: rem(60px);
     .join-us-button {
       @extend .dark-button;
       width: rem(220px);
-      font-size: 1.2rem;
     }
   }
 
   .what-is-code-for-good,
   .what-is-weekend-for-good {
-    margin: 2rem;
+    margin: 2rem 0;
 
     .wrapper {
       @extend .grid;
@@ -49,7 +48,7 @@ $utilitybar-height: rem(60px);
     .button-block,
     .text-block {
       @extend .grid__column, .grid__column--12;
-      padding: 2rem;
+      padding: 3rem 2rem;
     }
 
     .button-block {

@@ -2,13 +2,16 @@ $navbar-height: rem(60px);
 
 nav {
   @extend .page-container-fluid;
+  max-width: 57rem;
+  margin: 0 auto;
+  position: relative;
   background-color: $color-brand-dark;
   height: $navbar-height;
 
   .logo {
     margin-top: 0.5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: .7rem;
+    margin-right: .5rem;
     float: left;
     width: rem(48px);
     height: rem(41px);
@@ -22,7 +25,7 @@ nav {
     h1 {
       @extend .type-bold;
       text-transform: uppercase;
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: $color-white;
       margin: 0.5rem 2rem 0rem 0;
       letter-spacing: 0.05rem;
@@ -31,7 +34,7 @@ nav {
     h2 {
       margin: 0 0 0.25rem 0;
       text-transform: uppercase;
-      font-size: 0.85rem;
+      font-size: 0.6rem;
       color: $color-white;
       letter-spacing: 0.08rem;
     }
@@ -39,17 +42,21 @@ nav {
 
   .menu-toggle {
     position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    display: inline-block;
-    font-size: 1.5rem;
+    right: 0;
+    line-height: 0rem;
+    padding: 1.5rem 1rem;
+    display: block;
     text-transform: uppercase;
-    color: $color-white;
+    color: $color-snow;
     cursor: pointer;
     user-select: none;
 
     .menu-toggle-icon {
       display: none;
+    }
+
+    &:hover {
+      background-color: $color-brand-dark-hover;
     }
   }
 
@@ -73,12 +80,11 @@ nav {
       background-color: $color-brand-dark;
       color: $color-white;
       padding: 0.5rem 1rem;
-      border-top: 1px solid $color-brand;
 
       &:hover,
       &:focus,
       &:active {
-        background-color: $color-brand;
+        background-color: $color-brand-dark-hover;
       }
     }
   }

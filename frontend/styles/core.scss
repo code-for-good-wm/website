@@ -22,6 +22,9 @@ body {
 .page-container {
   @extend .container;
   clear: both;
+  @media (min-width: 28.8em) {
+    max-width: none;
+  }
 }
 
 .link-button {
@@ -34,11 +37,14 @@ body {
   @extend .link-button;
   background-color: $color-brand-dark;
   color: $color-white;
+  border: none;
+  transition: background-color 125ms;
+  font-size: 1rem;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: $color-brand;
+    background-color: $color-brand-dark-hover;
   }
 }
 
@@ -49,7 +55,7 @@ body {
   &:hover,
   &:focus,
   &:active {
-    color: $color-brand;
+    color: $color-brand-dark-hover;
   }
 }
 
