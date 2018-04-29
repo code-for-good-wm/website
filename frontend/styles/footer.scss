@@ -25,6 +25,7 @@ footer {
 
   .nav-links {
     list-style: none;
+    padding-bottom: 1rem;
 
     li {
       display: inline;
@@ -43,24 +44,6 @@ footer {
       a {
         text-decoration: none;
       }
-    }
-  }
-
-  .shaded-block {
-    padding: 1.5rem;
-    background-color: $color-brand;
-
-    .tag-line {
-      text-transform: uppercase;
-
-      .heart-icon {
-        color: $color-brand-dark;
-      }
-    }
-
-    .copyright {
-      margin-top: 1rem;
-      font-size: smaller;
     }
   }
 }
