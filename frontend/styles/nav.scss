@@ -47,6 +47,10 @@ nav {
     color: $color-white;
     cursor: pointer;
     user-select: none;
+
+    .menu-toggle-icon {
+      display: none;
+    }
   }
 
   .menu {
@@ -77,5 +81,15 @@ nav {
         background-color: $color-brand;
       }
     }
+  }
+}
+
+@media (max-width: #{map-get($breakpoints, md)}) {
+  .menu-toggle-icon {
+    display: inline-block !important;
+  }
+
+  .menu-toggle-text {
+    display: none;
   }
 }

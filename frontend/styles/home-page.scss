@@ -55,29 +55,39 @@ $utilitybar-height: rem(60px);
     .button-block {
       @extend .grid__column--4--md;
       background-color: $bg-color-medium;
-      text-align: center;
       position: relative;
+      min-height: rem(240px);
 
-      .heart-icon {
-        color: $color-brand-accent-hover;
-        font-size: 8rem;
+      .heart-stack {
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: center;
         position: relative;
-        top: calc(50% - 8rem);
-      }
 
-      .call-out-text-over-heart {
-        position: absolute;
-        top: calc(50% - 4rem);
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: $color-white;
-        z-index: 250;
-        margin: 0 3rem;
+        img {
+          align-self: center;
+          max-height: rem(150px);
+          z-index: 249;
+        }
+
+        .call-out-text-over-heart {
+          position: absolute;
+          max-width: rem(150px);
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: $color-white;
+          z-index: 250;
+          text-align: center;
+        }
       }
 
       .button {
         @extend .dark-button;
-        width: rem(220px);
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
       }
     }
 
@@ -94,6 +104,22 @@ $utilitybar-height: rem(60px);
   .working-together {
     img {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: #{map-get($breakpoints, md)}) {
+  .what-is-code-for-good,
+  .what-is-weekend-for-good {
+    margin: 2rem 0 !important;
+  }
+
+  .what-is-weekend-for-good {
+    .text-block {
+      order: 1;
+    }
+    .button-block {
+      order: 2;
     }
   }
 }
