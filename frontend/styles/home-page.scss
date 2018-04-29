@@ -48,7 +48,7 @@ $utilitybar-height: rem(60px);
     .button-block,
     .text-block {
       @extend .grid__column, .grid__column--12;
-      padding: 3rem 2rem;
+      padding: 3rem;
     }
 
     .button-block {
