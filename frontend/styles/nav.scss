@@ -9,12 +9,14 @@ nav {
   height: $navbar-height;
 
   .logo {
-    margin-top: 0.5rem;
+    margin-top: 0.55rem;
     margin-left: .7rem;
-    margin-right: .5rem;
     float: left;
-    width: rem(48px);
-    height: rem(41px);
+    height: rem(35px);
+
+    @media (max-width: 400px) {
+      display: none;
+    }
   }
 
   .site-identity {
@@ -27,12 +29,12 @@ nav {
       text-transform: uppercase;
       font-size: 1rem;
       color: $color-white;
-      margin: 0.5rem 2rem 0rem 0;
+      margin: 0.5rem 2rem 0rem .5rem;
       letter-spacing: 0.05rem;
     }
 
     h2 {
-      margin: 0 0 0.25rem 0;
+      margin: 0 0 0.25rem .5rem;
       text-transform: uppercase;
       font-size: 0.6rem;
       color: $color-white;

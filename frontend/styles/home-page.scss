@@ -89,6 +89,10 @@ $utilitybar-height: rem(60px);
       min-width: 325px;
       background-color: $bg-color-light;
 
+      @media(max-width: 600px) {
+        padding: 3rem 2rem;
+      }
+
       a {
         @extend .link-medium;
       }
