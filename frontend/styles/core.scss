@@ -5,9 +5,13 @@ $scale-unit: 20;
 @import "_colors";
 @import "_fonts";
 
-html, body {
-  font-family: $font-family-primary;
+html {
   font-size: 20px;
+  font-family: $font-family-primary;
+}
+
+body {
+  @extend body;
   color: $color-brand-dark;
 }
 
