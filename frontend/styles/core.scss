@@ -3,6 +3,12 @@
 @import "_colors";
 @import "_fonts";
 
+html, body {
+  font-family: $font-family-primary;
+  font-size: 20px;
+  color: $color-brand-dark;
+}
+
 .page-container-fluid {
   @extend .container--fluid;
 }
