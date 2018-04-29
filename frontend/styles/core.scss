@@ -3,6 +3,11 @@
 @import "_colors";
 @import "_fonts";
 
+body {
+  @extend body;
+  font-family: $font-family-primary;
+}
+
 .page-container-fluid {
   @extend .container--fluid;
 }
