@@ -1,0 +1,58 @@
+#contact-page {
+  @extend .page-container;
+  position: relative;
+  background-color: $bg-color-medium;
+  color: $color-white;
+  padding: 6rem;
+  margin-bottom: -2rem;
+
+  .circuit-left {
+    position: absolute;
+    max-height: 150px;
+    left: -50px;
+    bottom: -10px;
+    z-index: 250;
+  }
+
+  .circuit-right {
+    position: absolute;
+    max-height: 150px;
+    right: -50px;
+    bottom: -10px;
+    z-index: 250;
+    transform: rotate(0.5turn);
+  }
+
+  .contact-info-block {
+    margin: 2rem 0;
+    padding: 3rem;
+    background-color: $color-white;
+    color: $color-dark-font;
+    border-radius: 0.5rem;
+
+    h1 {
+      @extend .type-bold;
+    }
+  }
+
+  .email-contact-list {
+    @extend .list--unstyled;
+
+    li {
+      @extend .list__item;
+      margin-bottom: 2rem;
+
+      strong {
+        font-size: larger;
+      }
+
+      address {
+        @extend .lead;
+      }
+
+      a {
+        @extend .inverse-link;
+      }
+    }
+  }
+}
