@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "webpack -w",
+    "start": "run-p watch:*",
+    "watch:server": "dotnet watch run",
+    "watch:front-end": "webpack -w",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +21,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.8.3",
+    "npm-run-all": "^4.1.2",
     "prettier": "^1.12.1",
     "prettier-eslint": "^8.8.1",
     "sass-loader": "^7.0.1",
