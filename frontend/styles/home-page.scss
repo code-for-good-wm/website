@@ -47,6 +47,7 @@ $utilitybar-height: rem(60px);
 
     .button-block {
       margin-top: 2rem;
+      margin-bottom: 2rem;
       flex: 1;
       min-width: 325px;
       padding: 2rem;
@@ -85,6 +86,7 @@ $utilitybar-height: rem(60px);
 
     .text-block {
       margin-top: 2rem;
+      margin-bottom: 2rem;
       flex: 2;
       padding: 3rem;
       min-width: 325px;
@@ -101,7 +103,6 @@ $utilitybar-height: rem(60px);
   }
 
   .working-together {
-    margin-top: 2rem;
     img {
       width: 100%;
     }
