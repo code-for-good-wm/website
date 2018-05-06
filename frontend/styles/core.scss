@@ -87,3 +87,20 @@ html, body {
     color: $color-snow;
   }
 }
+
+.circuit-left {
+  position: absolute;
+  max-height: 150px;
+  left: -50px;
+  bottom: -10px;
+  z-index: 250;
+}
+
+.circuit-right {
+  position: absolute;
+  max-height: 150px;
+  right: -50px;
+  bottom: -10px;
+  z-index: 250;
+  transform: rotate(0.5turn);
+}
