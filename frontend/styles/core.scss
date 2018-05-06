@@ -93,7 +93,7 @@ html, body {
   max-height: 150px;
   left: -50px;
   bottom: -10px;
-  z-index: 250;
+  z-index: 100;
 }
 
 .circuit-right {
@@ -101,6 +101,6 @@ html, body {
   max-height: 150px;
   right: -50px;
   bottom: -10px;
-  z-index: 250;
+  z-index: 100;
   transform: rotate(0.5turn);
 }
