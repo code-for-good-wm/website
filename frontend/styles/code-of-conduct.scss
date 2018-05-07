@@ -1,3 +1,38 @@
 #code-of-conduct-page {
   @extend .page-container;
+  .heading {
+    position: relative;
+    background-color: rgba(110, 183, 172, 0.7);
+    width: 100%;
+    padding: 4.8rem;
+
+    h1 {
+      color: $color-white;
+      display: block;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .small-head {
+      font-size: 20px;
+    }
+  }
+
+  .coc {
+    max-width: 640px;
+    margin: 0 auto;
+
+    h2 {
+      margin: 4.8rem 0 2.4rem;
+    }
+
+    .license {
+      font-size: 14px;
+      margin: 4.8rem 0;
+
+      h2 {
+        font-size: 18px;
+        margin: 2em 0 1em;
+      }
+    }
+  }
 }
