@@ -19,6 +19,8 @@ html, body {
   font-family: $font-family-primary;
   font-size: 20px;
   color: $color-brand-dark;
+  overflow-x: hidden;
+
   @media(max-width: 500px) {
     font-size: 18px;
   }
@@ -94,6 +96,10 @@ html, body {
   left: -50px;
   bottom: -10px;
   z-index: 100;
+
+  @media(max-width: 600px) {
+    display: none;
+  }
 }
 
 .circuit-right {
@@ -103,4 +109,8 @@ html, body {
   bottom: -10px;
   z-index: 100;
   transform: rotate(0.5turn);
+
+  @media(max-width: 600px) {
+    display: none;
+  }
 }
