@@ -1,16 +1,19 @@
 #contact-page {
   @extend .page-container;
-  position: relative;
   background-color: $bg-color-medium;
+  position: relative;
   color: $color-white;
-  padding: 6rem;
-  margin-bottom: -2rem;
+  overflow-x: hidden;
+
+  .page-frame {
+    padding: 2rem 6rem;
+  }
 
   .circuit-left {
     position: absolute;
     max-height: 150px;
     left: -50px;
-    bottom: -10px;
+    bottom: 0;
     z-index: 250;
   }
 
@@ -18,14 +21,15 @@
     position: absolute;
     max-height: 150px;
     right: -50px;
-    bottom: -10px;
+    bottom: 0;
     z-index: 250;
     transform: rotate(0.5turn);
+    overflow: visible;
   }
 
   .contact-info-block {
     margin: 2rem 0;
-    padding: 3rem;
+    padding: 2.4rem 3rem;
     background-color: $color-white;
     color: $color-dark-font;
     border-radius: 0.5rem;
@@ -37,6 +41,7 @@
 
   .email-contact-list {
     @extend .list--unstyled;
+    padding: 0 3rem;
 
     li {
       @extend .list__item;
@@ -53,6 +58,31 @@
       a {
         @extend .inverse-link;
       }
+    }
+  }
+}
+
+@media (max-width: #{map-get($breakpoints, md)}) {
+  #contact-page {
+    padding: 1rem;
+
+    .circuit-left {
+      max-height: 75px;
+      left: -25px;
+    }
+
+    .circuit-right {
+      max-height: 75px;
+      right: -25px;
+    }
+
+    .contact-info-block {
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .email-contact-list {
+      padding: 2rem 1rem 1rem;
     }
   }
 }
