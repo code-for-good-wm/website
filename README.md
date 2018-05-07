@@ -13,7 +13,7 @@ https://www.microsoft.com/net/learn/get-started
 
 #### Recommended Editor
 
-[Visual Studio Code](https://code.visualstudio.com) - It can run the app for you
+[Visual Studio Code](https://code.visualstudio.com)
 
 ### Frontend
 
@@ -28,11 +28,15 @@ Run `npm i` to install the dependencies
 
 ## Running the app
 
-The backend can be run with VS Code or opening the project folder in a CLI and using the command `dotnet run`
+```
+npm start
+``` 
 
-The front end will be served by DotNet, but the static assests will need to be compiled. `npm start` will begin a Webpack build with file-watcher, while `npm run build` will produce the production artifacts.
+will begin a Webpack build of the frontend with file-watcher as well as starting the backend server.
 
 ## Deploy to AWS Instructions
+
+`npm run build` will produce the frontend production artifacts.
 
 In the root folder run
 
