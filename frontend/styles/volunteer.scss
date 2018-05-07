@@ -1,3 +1,22 @@
 #volunteer-page {
   @extend .page-container;
+  iframe {
+    display: block;
+  }
+
+  .closing-block {
+    padding: 3rem 2rem;
+    background-color: $color-brand;
+    color: $color-white;
+
+    a {
+      color: $color-white;
+      text-decoration: underline;
+    }
+
+    p {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+  }
 }
