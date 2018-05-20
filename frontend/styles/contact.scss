@@ -5,21 +5,12 @@
   color: $color-white;
   padding: 2rem 6rem;
 
-  .circuit-left {
-    position: absolute;
-    max-height: 150px;
-    left: -50px;
-    bottom: -10px;
-    z-index: 250;
+  @media(max-width: 800px) {
+    padding: .5rem 2rem 2rem;
   }
 
-  .circuit-right {
-    position: absolute;
-    max-height: 150px;
-    right: -50px;
-    bottom: -10px;
-    z-index: 250;
-    transform: rotate(0.5turn);
+  @media(max-width: 600px) {
+    padding: 0;
   }
 
   .contact-info-block {
@@ -32,11 +23,21 @@
     h1 {
       @extend .type-bold;
     }
+
+    @media(max-width: 600px) {
+      margin: 0;
+      border-radius: 0;
+    }
   }
 
   .email-contact-list {
     @extend .list--unstyled;
     padding: 0 3rem;
+    margin: 0;
+
+    @media(max-width: 600px) {
+      padding: 2.4rem 3rem 1rem;
+    }
 
     li {
       @extend .list__item;

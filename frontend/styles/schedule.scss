@@ -5,11 +5,23 @@
   color: $color-white;
   padding: 6rem;
 
+  @media(max-width: 600px) {
+    padding: 3rem 2rem;
+
+    h1 {
+      font-size: 1rem;
+    }
+  }
+
   h1 {
     @extend .type-bold;
     color: $color-white;
     font-size: 1.8rem;
     margin: 0;
+
+    @media(max-width: 600px) {
+      font-size: 1.25rem;
+    }
   }
 
   h2 {

@@ -6,10 +6,14 @@
     width: 100%;
     padding: 4.8rem;
 
+    @media(max-width: 600px) {
+      padding: 3rem 2rem;
+    }
+
     h1 {
       color: $color-white;
       display: block;
-      max-width: 640px;
+      max-width: rem(640px);
       margin: 0 auto;
     }
     .small-head {
@@ -18,19 +22,29 @@
   }
 
   .coc {
-    max-width: 640px;
+    max-width: rem(680px);
     margin: 0 auto;
+    padding: 2rem;
+
+    @media(max-width: 600px) {
+      font-size: .9rem;
+    }
 
     h2 {
       margin: 4.8rem 0 2.4rem;
+
+      @media(max-width: 600px) {
+        margin: 2rem 0rem 1rem;
+        font-size: 1.5rem;
+      }
     }
 
     .license {
-      font-size: 14px;
+      font-size: .8rem;
       margin: 4.8rem 0;
 
       h2 {
-        font-size: 18px;
+        font-size: 1rem;
         margin: 2em 0 1em;
       }
     }
