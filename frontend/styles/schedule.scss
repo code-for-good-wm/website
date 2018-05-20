@@ -5,6 +5,14 @@
   color: $color-white;
   padding: 6rem;
 
+  a {
+    color: $color-light-font;
+
+    &:hover {
+      color: $color-dark-font;
+    }
+  }
+
   @media(max-width: 600px) {
     padding: 3rem 2rem;
 
