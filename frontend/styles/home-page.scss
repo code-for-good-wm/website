@@ -4,10 +4,13 @@ $utilitybar-height: rem(60px);
   @extend .page-container;
 
   .hero {
-    //background-image: url("/assets/hero-background.jpg");
+    background-image: url("/assets/homepage-hero-full.jpg");
+    background-size: cover;
+    background-position: center bottom;
 
     .hero-overlay {
-      background-color: rgba(110, 183, 172, 0.7);
+      background-color: rgba(110, 183, 172, 0.4);
+      position: relative;
       height: rem(420px);
       width: 100%;
       display: flex;
