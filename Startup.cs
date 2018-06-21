@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using CodeForGood.Config;
 
 namespace CodeForGood
 {
@@ -30,6 +31,8 @@ namespace CodeForGood
             services.AddRouting(options => {
                 options.LowercaseUrls = true;
             });
+
+            services.AddSingleton<IGoogleSettings, GoogleSettings>(e => Configuration.GetSection(nameof(GoogleSettings)).Get<GoogleSettings>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

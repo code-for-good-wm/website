@@ -366,3 +366,9 @@ wwwroot/js/app.min.js
 wwwroot/js/app.min.js.map
 wwwroot/css/site.min.css
 wwwroot/css/site.min.css.map
+
+# Envars
+.env
+
+# Process Management
+Procfile
