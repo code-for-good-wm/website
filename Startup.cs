@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CodeForGood.Components;
+using CodeForGood.Config;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using CodeForGood.Config;
 
 namespace CodeForGood
 {
@@ -33,6 +35,7 @@ namespace CodeForGood
             });
 
             services.AddSingleton<IGoogleSettings, GoogleSettings>(e => Configuration.GetSection(nameof(GoogleSettings)).Get<GoogleSettings>());
+            services.AddSingleton<ITagHelperComponent, GoogleTagComponent>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
