@@ -11,6 +11,8 @@ The code for http://codeforgoodwm.org/
 DotNet platform (OSX Unix and Windows):
 https://www.microsoft.com/net/learn/get-started
 
+The app is currently using .Net Core SDK 2.1
+
 #### Recommended Editor
 
 [Visual Studio Code](https://code.visualstudio.com)

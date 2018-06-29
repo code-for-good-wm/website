@@ -1,14 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
+
 using CodeForGood.Components;
 using CodeForGood.Config;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.ResponseCompression;
 
 namespace CodeForGood
 {
@@ -25,13 +30,23 @@ namespace CodeForGood
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc()
-                .AddRazorPagesOptions(options => {
+                .AddRazorPagesOptions(options =>
+                {
                     // Customize URLS if needed
                     //options.Conventions.AddPageRoute("/codeofconduct", "code-of-conduct");
                 });
 
-            services.AddRouting(options => {
+            services.AddRouting(options =>
+            {
                 options.LowercaseUrls = true;
+            });
+
+            services.AddResponseCompression(options =>
+            {
+                options.Providers.Add<BrotliCompressionProvider>();
+                options.Providers.Add<GzipCompressionProvider>();
+
+                options.EnableForHttps = true;
             });
 
             services.AddSingleton<IGoogleSettings, GoogleSettings>(e => Configuration.GetSection(nameof(GoogleSettings)).Get<GoogleSettings>());
@@ -48,11 +63,24 @@ namespace CodeForGood
             else
             {
                 app.UseExceptionHandler("/Error");
+                app.UseHsts();
             }
 
             app.UseStaticFiles();
-
+            app.UseHttpsRedirection();
+            app.UseResponseCompression();
             app.UseMvc();
         }
     }
+
+    public class BrotliCompressionProvider : ICompressionProvider
+    {
+        public string EncodingName => "br";
+
+        public bool SupportsFlush => true;
+
+        public Stream CreateStream(Stream outputStream) => new BrotliStream(outputStream, CompressionMode.Compress);
+
+    }
 }
+
