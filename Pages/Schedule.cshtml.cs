@@ -1,19 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using CodeForGood.Components;
+
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CodeForGood.Pages
 {
-    public class ScheduleModel : PageModel
-    {
-        public DateRange WeekendForGoodDateRange { get; set; }
+	public class ScheduleModel : PageModel
+	{
+		public DateRange WeekendForGoodDateRange { get; set; }
 
-        public void OnGet()
-        {
-            WeekendForGoodDateRange = WeekendForGoodServices.WhenIsWeekendForGood();
-        }
-    }
+		public void OnGet()
+		{
+			WeekendForGoodDateRange = WeekendForGoodServices.WhenIsWeekendForGood();
+		}
+	}
 }

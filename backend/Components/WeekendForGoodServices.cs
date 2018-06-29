@@ -1,6 +1,6 @@
 using System;
 
-namespace CodeForGood
+namespace CodeForGood.Components
 {
     public class WeekendForGoodServices
     {
