@@ -1,3 +1,5 @@
+using System.Text;
+
 using CodeForGood.Components;
 using CodeForGood.Config;
 
@@ -5,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -62,10 +65,56 @@ namespace CodeForGood
 				app.UseHsts();
 			}
 
+			var options = new RewriteOptions()
+				.AddRedirectToProxiedHttps()
+				.AddRedirect("(.*)/$", "$1");
+			app.UseRewriter(options);
+
+			app.UseForwardedHeaders();
 			app.UseStaticFiles();
 			app.UseHttpsRedirection();
 			app.UseResponseCompression();
 			app.UseMvc();
+		}
+	}
+
+	public static class RedirectToProxiedHttpsExtensions
+	{
+		public static RewriteOptions AddRedirectToProxiedHttps(this RewriteOptions options)
+		{
+			options.Rules.Add(new RedirectToProxiedHttpsRule());
+			return options;
+		}
+	}
+
+	public class RedirectToProxiedHttpsRule : IRule
+	{
+		public virtual void ApplyRule(RewriteContext context)
+		{
+			var request = context.HttpContext.Request;
+
+			// #1) Did this request start off as HTTP?
+			string reqProtocol;
+			if (request.Headers.ContainsKey("X-Forwarded-Proto"))
+			{
+				reqProtocol = request.Headers["X-Forwarded-Proto"][0];
+			}
+			else
+			{
+				reqProtocol = (request.IsHttps ? "https" : "http");
+			}
+
+
+			// #2) If so, redirect to HTTPS equivalent
+			if (reqProtocol != "https")
+			{
+				var newUrl = new StringBuilder()
+					.Append("https://").Append(request.Host)
+					.Append(request.PathBase).Append(request.Path)
+					.Append(request.QueryString);
+
+				context.HttpContext.Response.Redirect(newUrl.ToString(), true);
+			}
 		}
 	}
 }
