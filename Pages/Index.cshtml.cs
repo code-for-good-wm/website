@@ -10,6 +10,8 @@ namespace CodeForGood.Pages
 
 		public void OnGet()
 		{
+			ViewData["Title"] = "Code for Good West Michigan";
+
 			WeekendForGoodDateRange = WeekendForGoodServices.WhenIsWeekendForGood();
 		}
 	}

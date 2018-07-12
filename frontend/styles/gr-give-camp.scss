@@ -1,0 +1,20 @@
+﻿#gr-give-camp-page {
+  padding: 3rem;
+  text-align: center;
+
+  .gr-give-camp-logo {
+    width: 15rem;
+  }
+
+  .right-arrow-icon {
+    position: relative;
+    top: 2rem;
+    font-size: 6rem;
+    color: $color-brand;
+    margin: 2rem 5rem;
+
+    &:hover {
+      color: $color-brand-hover;
+    }
+  }
+}
