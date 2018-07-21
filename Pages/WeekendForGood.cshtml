@@ -2,14 +2,26 @@
 @model codeforgood.Pages.WeekendForGoodModel
 @{
     ViewData["Title"] = "Weekend For Good";
+
+    var dateRange = Model.WeekendForGoodDateRange;
 }
 <div id="weekend-for-good-page">
-    <img class="circuit-left" src="~/assets/Circuits@2x.png" />
-    <img class="circuit-right" src="~/assets/Circuits@2x.png" />
-    <h1>Weekend&nbsp;for&nbsp;Good will&nbsp;be&nbsp;held</h1>
-    <h2>@Model.WeekendForGoodDateRange</h2>
-    <p>Weekend for Good is an event held in collaboration with <a href="https://westmichigan.aiga.org/">AIGA West Michigan</a>. That weekend, volunteers who are experts in software development, design and other fields donate their time to non-profits, creating custom software to further their charitable missions. Whether you're an expert or no, we need your help!</p>
-    <div class="action-buttons">
-        <a class="button" asp-page="./volunteer">Volunteer</a>
+    <div class="hero-banner">
+        <div class="wfg-banner">
+            <div class="wfg-box">
+                <div class="wfg">
+                    WFG
+                </div>
+            </div>
+            <div class="wfg-title">
+                <h1>
+                    Weekend<br/>
+                    for <span class="the-word-good">Good</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="date-banner">
+        @($"{dateRange.From:MMM. d}-{dateRange.To:d yyyy}")
     </div>
 </div>

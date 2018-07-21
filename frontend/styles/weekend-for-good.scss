@@ -1,0 +1,60 @@
+﻿$lightBlue: #7bced2;
+
+#weekend-for-good-page {
+  .hero-banner {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+
+    .wfg-banner {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-column-gap: 15px;
+
+      .wfg-box {
+        width: 150px;
+        height: 150px;
+        background-color: $lightBlue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .wfg {
+          color: #ffffff;
+          letter-spacing: 7px;
+          font-weight: bold;
+          font-size: 2.0rem;
+        }
+      }
+
+      .wfg-title {
+        margin-left: 1rem;
+        margin-top: -0.5rem;
+
+        h1 {
+          margin: 0;
+          line-height: 4.25rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 4.25rem;
+          color: $color-brand-dark;
+
+          .the-word-good {
+            color: $lightBlue;
+          }
+        }
+      }
+    }
+  }
+
+  .date-banner {
+    clear: both;
+    background-color: $lightBlue;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+}

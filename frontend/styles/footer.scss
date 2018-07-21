@@ -14,7 +14,7 @@ footer {
 
     li {
       display: inline-block;
-      padding: 1.5rem .7rem 0.5rem;
+      padding: 1.5rem 0.7rem 0.5rem;
 
       .fab {
         font-size: x-large;
@@ -36,7 +36,7 @@ footer {
       &:not(:last-child) {
         &:after {
           display: inline;
-          padding: 0 .8rem 0 1rem;
+          padding: 0 0.8rem 0 1rem;
           content: "|";
         }
       }
