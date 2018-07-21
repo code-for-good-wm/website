@@ -1,8 +1,10 @@
-﻿namespace CodeForGood.Components
+﻿using System.Net.Mail;
+
+namespace CodeForGood.Components
 {
     public interface IEmailMessage
     {
-        string To { get; set; }
+        MailAddress To { get; set; }
 
         string Subject { get; set; }
 

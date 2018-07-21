@@ -1,35 +1,52 @@
 ﻿@page
 @model ContactModel
 @{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "Contact Us";
 }
 <div id="contact-page">
-    <img class="circuit-left" src="~/assets/Circuits@2x.png"/>
-    <img class="circuit-right" src="~/assets/Circuits@2x.png"/>
-
+    <img class="circuit-left" src="~/assets/Circuits@2x.png" />
+    <img class="circuit-right" src="~/assets/Circuits@2x.png" />
     <div class="contact-info-block">
-        <h1>Have questions?</h1>
-        <div class="email-us">
-            Email us at <a href="mailto:info@codeforgoodwm.org">info@codeforgoodwm.org</a>
-        </div>
+        <h1>Contact Us</h1>
+        <form asp-page="Contact" method="post">
+            <label for="type">What are you contacting us about?</label>
+            <select id="type" name="type">
+                <option value="Volunteer">I'm interested in helping out</option>
+                <option value="NonProfit">I need your help</option>
+                <option value="Info">I have questions</option>
+                <option value="Info">I have answers</option>
+                <option value="Info">None of the above</option>
+            </select>
+            <label for="type">What's your message?</label>
+            <textarea id="message" name="message" rows="12"></textarea>
+            <button type="submit">
+                <i class="fas fa-envelope"></i> Send
+            </button>
+        </form>
     </div>
 
     <ul class="email-contact-list">
         <li>
             <address>
-                <strong>President</strong><br/>
+                <strong>President</strong><br />
                 <em>Sarah Titus</em> - <a href="mailto:sarah@sarahautumndesigns.com">sarah@sarahautumndesigns.com</a>
             </address>
         </li>
         <li>
             <address>
-                <strong>Volunteer Coordinator</strong><br/>
+                <strong>Information</strong><br />
+                <a href="mailto:info@codeforgoodwm.org">info@codeforgoodwm.org</a>
+            </address>
+        </li>
+        <li>
+            <address>
+                <strong>Volunteer Coordinator</strong><br />
                 <a href="mailto:volunteer@codeforgoodwm.org">volunteer@codeforgoodwm.org</a>
             </address>
         </li>
         <li>
             <address>
-                <strong>Non-Profit Coordinator</strong><br/>
+                <strong>Non-Profit Coordinator</strong><br />
                 <a href="mailto:nonprofit@codeforgoodwm.org">nonprofit@codeforgoodwm.org</a>
             </address>
         </li>

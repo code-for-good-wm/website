@@ -26,13 +26,13 @@ namespace CodeForGood.Components
             {
                 var msg = new MailMessage
                 {
-                    From = new MailAddress("contact-us@codeforgoodwm.org", "Code for Good West Michigan Contact Form"),
+                    From = new MailAddress("contact-us@codeforgoodwm.org", "Website Contact Form"),
                     Subject = emailMessage.Subject,
                     Body = emailMessage.Body,
                     IsBodyHtml = emailMessage.IsBodyHtml,
                     To =
                     {
-                        new MailAddress(emailMessage.To)
+                        emailMessage.To
                     }
                 };
 

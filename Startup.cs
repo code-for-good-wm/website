@@ -59,8 +59,7 @@ namespace CodeForGood
 
             services.AddRouting(options => { options.LowercaseUrls = true; });
 
-            services.AddSingleton<IGoogleSettings, GoogleSettings>(e =>
-                Configuration.GetSection(nameof(GoogleSettings)).Get<GoogleSettings>());
+            services.AddSingleton<IGoogleSettings, GoogleSettings>(e => Configuration.GetSection(nameof(GoogleSettings)).Get<GoogleSettings>());
 
             services.AddSingleton<ITagHelperComponent, GoogleTagComponent>();
         }

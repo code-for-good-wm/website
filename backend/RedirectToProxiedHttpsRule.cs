@@ -18,7 +18,8 @@ namespace CodeForGood
 			{
 				var uri = new UriBuilder(request.GetUri())
 				{
-					Scheme = Uri.UriSchemeHttps
+					Scheme = Uri.UriSchemeHttps,
+                    Port = -1
 				};
 
 				context.HttpContext.Response.Redirect(uri.ToString(), true);

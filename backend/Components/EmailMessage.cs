@@ -1,8 +1,12 @@
-﻿namespace CodeForGood.Components
+﻿using System;
+
+using System.Net.Mail;
+
+namespace CodeForGood.Components
 {
     public class EmailMessage : IEmailMessage
     {
-        public string To { get; set; }
+        public MailAddress To { get; set; }
 
         public string Subject { get; set; }
 

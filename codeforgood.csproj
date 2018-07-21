@@ -4,6 +4,7 @@
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Akismet.NET" Version="1.0.0" />
     <PackageReference Include="Amazon.Ses" Version="0.10.1" />
     <PackageReference Include="Cql.Core.AwsElasticBeanstalk" Version="1.1.0" />
     <PackageReference Include="Humanizer.Core" Version="2.4.2" />
