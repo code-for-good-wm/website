@@ -1,5 +1,6 @@
 #volunteer-page {
   @extend .page-container;
+
   iframe {
     display: block;
   }
@@ -16,7 +17,13 @@
 
     p {
       max-width: 640px;
-      margin: 0 auto;
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -1,0 +1,37 @@
+﻿@page
+@model codeforgood.Pages.WeekendForGoodModel
+@{
+    ViewData["Title"] = "Weekend For Good";
+
+    var dateRange = Model.DateRange;
+    var location = Model.LocationAddress;
+}
+<div id="weekend-for-good-page">
+    <div class="hero-banner">
+        <div class="wfg-banner">
+            <div class="wfg-box">
+                <div class="wfg">
+                    WFG
+                </div>
+            </div>
+            <div class="wfg-title">
+                <h1>
+                    Weekend<br />
+                    for <span class="the-word-good">Good</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="date-banner">
+        @($"{dateRange.From:MMM. d} - {dateRange.To:d yyyy}")
+    </div>
+    <div class="location-address">
+        <h1>Location</h1>
+        <strong>@location.Name</strong><br />
+        @location.AddressLine1<br />
+        @location.City, @location.State @location.PostalCode<br />
+        <p>
+            <a href="https://www.google.com/maps/dir/''/Start+Garden,+40+Pearl+St+NW+%23200,+Grand+Rapids,+MI+49503"><i class="fas fa-map-marker"></i> Directions</a>
+        </p>
+    </div>
+</div>

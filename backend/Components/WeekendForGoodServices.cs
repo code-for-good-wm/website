@@ -6,9 +6,8 @@ namespace CodeForGood.Components
     {
         public static DateRange WhenIsWeekendForGood()
         {
-
-            var startDate = "November 2, 2018";
-            var endDate = "November 4, 2018";
+			const string startDate = "November 2, 2018";
+            const string endDate = "November 4, 2018";
 
             var gmtOffset = TimeSpan.FromHours(-5);
 
@@ -28,7 +27,7 @@ namespace CodeForGood.Components
                 City = "Grand Rapids",
                 State = "MI",
                 PostalCode = "49503",
-                Country = "US",
+                Country = "United States of America",
                 Planet = "Earth"
             };
         }

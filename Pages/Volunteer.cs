@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CodeForGood.Components;
+
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CodeForGood.Pages
 {
-    public class VolunteerModel : PageModel
-    {
-        public string Message { get; set; }
+	public class VolunteerModel : PageModel
+	{
+		public DateRange DateRange { get; set; }
 
-        public void OnGet()
-        {
-            Message = "Your volunteer page.";
-        }
-    }
+		public void OnGet()
+		{
+			DateRange = WeekendForGoodServices.WhenIsWeekendForGood();
+		}
+	}
 }

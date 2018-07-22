@@ -1,7 +1,9 @@
 ﻿@page
 @model VolunteerModel
 @{
-    ViewData["Title"] = "Volunteer Sign-up";
+    ViewBag.Title = "Volunteer Sign-up";
+
+    var dateRange = Model.DateRange;
 }
 <div id="volunteer-page">
     <div class="iframe-container">
@@ -9,9 +11,12 @@
     </div>
     <div class="closing-block">
         <p>
-            While Weekend for Good happens November 2-4, 2018 (and we hope to
+            While Weekend for Good happens @($"{dateRange.From:MMMM d}-{dateRange.To:d, yyyy}") (and we hope to
             see you there), we’re looking for volunteers to help with other Code
-            for Good projects all year long. <a asp-page="./contact">Contact us</a>
+            for Good projects all year long.
+        </p>
+        <p>
+            <a asp-page="./Contact">Contact us</a>
             if you'd like to volunteer some other time or in some other
             capacity.
         </p>

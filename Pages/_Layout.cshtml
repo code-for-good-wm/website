@@ -27,19 +27,22 @@
     <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
 </head>
 <body>
-    @{
-        if (IsSectionDefined("nav"))
-        {
-            // This hides the nav on the homepage
-            @RenderSection("nav", required: false)
+    <div class="layout-container">
+        @{
+            if (IsSectionDefined("nav"))
+            {
+                // This hides the nav on the homepage
+                @RenderSection("nav", required: false)
+            }
+            else
+            {
+                @await Html.PartialAsync("_Nav")
+            }
         }
-        else
-        {
-            @await Html.PartialAsync("_Nav")
-        }
-    }
-    @RenderBody()
-    @await Html.PartialAsync("_Footer")
+
+        @RenderBody()
+        @await Html.PartialAsync("_Footer")
+    </div>
     <script src="~/js/app.min.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

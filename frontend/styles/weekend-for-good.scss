@@ -1,6 +1,8 @@
 ﻿$lightBlue: #7bced2;
 
 #weekend-for-good-page {
+  @extend .page-container;
+
   .hero-banner {
     width: 80%;
     margin: 3rem auto;

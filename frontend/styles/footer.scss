@@ -1,8 +1,11 @@
 footer {
-  @extend .page-container;
+  width: 100%;
   color: $color-white;
   text-align: center;
   background-color: $color-brand-dark;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 
   a {
     @extend .inverse-link;

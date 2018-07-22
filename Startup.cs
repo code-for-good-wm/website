@@ -31,7 +31,12 @@ namespace CodeForGood
                 .AddRazorPagesOptions(options =>
                 {
                     // Customize URLS if needed
-                    //options.Conventions.AddPageRoute("/codeofconduct", "code-of-conduct");
+	                var conventions = options.Conventions;
+
+	                conventions.AddPageRoute("/CodeOfConduct", "code-of-conduct");
+	                conventions.AddPageRoute("/GRGiveCamp", "gr-give-camp");
+	                conventions.AddPageRoute("/NonprofitAgencies", "nonprofit-agencies");
+					conventions.AddPageRoute("/WeekendForGood", "weekend-for-good");
                 });
 
 
