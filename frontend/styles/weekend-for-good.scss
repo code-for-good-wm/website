@@ -57,6 +57,60 @@
     text-align: center;
     font-weight: bold;
     padding: 1rem;
-    margin-bottom: 3rem;
+  }
+
+  .partnership-banner {
+    background-color: $color-value-4;
+    text-align: center;
+    padding: 4rem;
+  }
+
+  .photo-block {
+    width: 40%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text-block {
+    width: 60%;
+    padding: 2rem;
+  }
+
+  .button-block {
+    text-align: center;
+    width: 50%;
+    padding: 4rem 2rem;
+
+    img {
+      width: rem(150px);
+    }
+
+    h3 {
+      @extend .type-bold;
+      color: $color-brand-dark;
+      padding: 1rem;
+    }
+
+    .button {
+      @extend .dark-button;
+      width: rem(225px);
+    }
+  }
+
+  .what-is-code-for-good, .what-is-weekend-for-good, .call-to-action-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .what-is-code-for-good {
+    .text-block {
+      border-top: 2rem solid $color-value-4;
+    }
+  }
+
+  .call-to-action-links {
+    background-color: $color-value-4;
   }
 }

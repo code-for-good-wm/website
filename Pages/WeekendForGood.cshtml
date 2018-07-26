@@ -25,6 +25,54 @@
     <div class="date-banner">
         @($"{dateRange.From:MMM. d} - {dateRange.To:d yyyy}")
     </div>
+    <div class="partnership-banner">
+        <img src="https://grgivecamp.org/assets/partnership.png" alt="Placeholder" />
+    </div>
+    <div class="what-is-code-for-good">
+        <div class="photo-block">
+            <img src="https://grgivecamp.org/assets/photo-collage-1.png" alt="Photo Collage" />
+        </div>
+        <div class="text-block">
+            <h2>What is Code for Good?</h2>
+            <p>
+                We’re a volunteer-run collective of technology professionals in Grand Rapids, Michigan, dedicated to creating tech solutions for non-profit agencies.
+            </p>
+            <p>
+                Our primary event is <strong>Weekend for Good</strong> in November, but we are involved with projects all year long.
+            </p>
+            <p>
+                Want to help? <a asp-page="./Volunteer">Let us know!</a>
+            </p>
+        </div>
+    </div>
+    <div class="what-is-weekend-for-good">
+
+        <div class="text-block">
+            <h2>Ok, What's Weekend for Good?</h2>
+            <p>Weekend for Good is an event held in collaboration with <a href="https://westmichigan.aiga.org/">AIGA West Michigan</a>.</p>
+            <p> On <strong>@dateRange</strong>, volunteers who are experts in software development, design and other fields donate their time to non-profits, creating custom software to further their charitable missions.</p>
+            <p>In turn, those non-profits create meaningful change here in Grand Rapids and around the globe.</p>
+        </div>
+        <div class="photo-block">
+            <img src="https://grgivecamp.org/assets/photo-collage-2.png" alt="Photo Collage" />
+        </div>
+    </div>
+    <div class="call-to-action-links">
+        <div class="button-block">
+            <div class="icon-stack">
+                <img src="https://grgivecamp.org/assets/volunteer-icon.png" alt="Be a part of Weekend for Good" />
+                <h3 class="call-out-text">I want to donate my time!</h3>
+            </div>
+            <a class="button" asp-page="./Volunteer">Volunteer</a>
+        </div>
+        <div class="button-block">
+            <div class="icon-stack">
+                <img src="https://grgivecamp.org/assets/non-profit-icon.png"  alt="Apply to be a Non-Profit that we help"/>
+                <h3 class="call-out-text">Can you help my non-profit?</h3>
+            </div>
+            <a class="button" asp-page="./NonprofitAgencies">Apply</a>
+        </div>
+    </div>
     <div class="location-address">
         <h1>Location</h1>
         <strong>@location.Name</strong><br />
