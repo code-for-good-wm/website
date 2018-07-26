@@ -34,6 +34,7 @@ namespace CodeForGood
 	                var conventions = options.Conventions;
 
 	                conventions.AddPageRoute("/CodeOfConduct", "code-of-conduct");
+                    conventions.AddPageRoute("/ParticipantAgreement", "participant-agreement");
 	                conventions.AddPageRoute("/GRGiveCamp", "gr-give-camp");
 	                conventions.AddPageRoute("/NonprofitAgencies", "nonprofit-agencies");
 					conventions.AddPageRoute("/WeekendForGood", "weekend-for-good");
