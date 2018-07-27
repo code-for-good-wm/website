@@ -6,7 +6,7 @@
     text-align: center;
 
     img {
-      width: 80%;
+      width: 50%;
     }
   }
 
@@ -23,11 +23,18 @@
     background-color: $color-value-4;
     padding: 4rem;
 
+    .a-partnership-with {
+      @extend .type-bold;
+      font-size: larger;
+    }
+
     .layout-wrapper {
+      padding: 1rem;
       margin-left: auto;
       margin-right: auto;
       display: flex;
       justify-content: center;
+      align-items: center;
       align-content: space-between;
       flex-direction: row;
     }
@@ -36,21 +43,16 @@
       width: 100%;
     }
 
-    .code-for-good-logo {
-      width: 48%;
-    }
-
     .plus-icon {
-      text-align: center;
-      width: 8%;
       display: flex;
       align-items: center;
-      padding: 2rem;
-      font-size: larger;
-    }
 
-    .aiga-wm-logo {
-      width: 44%;
+      .plus-text {
+        padding: 0 2rem;
+        text-align: center;
+        font-size: 4rem;
+        line-height: 4rem;
+      }
     }
   }
 
@@ -120,6 +122,10 @@
     font-weight: bold;
     padding: 1rem;
   }
+
+  .weekend-for-good-name {
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: #{map-get($breakpoints, md)}) {
@@ -144,7 +150,10 @@
       .plus-icon {
         display: block;
         text-align: center;
-        padding: 1rem;
+
+        .plus-text {
+          padding: 1rem;
+        }
       }
 
       .code-for-good-logo, .plus-icon, .aiga-wm-logo {
@@ -163,6 +172,39 @@
 
     .button-block {
       width: 100%;
+    }
+  }
+}
+
+@media (min-width: #{map-get($breakpoints, md)}) and (max-width: #{map-get($breakpoints, lg)}) {
+
+  #weekend-for-good-page {
+
+    .hero-banner {
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .partnership-banner {
+      padding: 2rem;
+    }
+
+    .what-is-code-for-good, .what-is-weekend-for-good {
+      .text-block {
+        border-top: none;
+      }
+    }
+
+    .photo-block {
+      width: 50%;
+      background-color: $color-brand-accent;
+    }
+
+    .text-block {
+      width: 50%;
+      padding: 2rem;
     }
   }
 }

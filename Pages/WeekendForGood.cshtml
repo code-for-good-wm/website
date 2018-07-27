@@ -14,15 +14,18 @@
         @($"{dateRange.From:MMM. d} - {dateRange.To:d yyyy}")
     </div>
     <div class="partnership-banner">
+        <div class="a-partnership-with">
+            A partnership with,
+        </div>
         <div class="layout-wrapper">
             <div class="code-for-good-logo">
-                <img src="https://grgivecamp.org/assets/CFG-horizontal-logo.png" alt="Code for Good West Michigan" />
+                <img src="https://grgivecamp.org/assets/CFG-horizontal-logo.png" alt="Code for Good West Michigan"/>
             </div>
             <div class="plus-icon">
-                <i class="fas fa-plus"></i>
+                <span class="plus-text">+</span>
             </div>
             <div class="aiga-wm-logo">
-                <img src="https://grgivecamp.org/assets/aiga-wm-logo.png" alt="AIGA West Michigan" />
+                <img src="https://grgivecamp.org/assets/aiga-wm-logo.png" alt="AIGA West Michigan"/>
             </div>
         </div>
     </div>
@@ -72,7 +75,7 @@
         </div>
     </div>
     <div class="location-address">
-        <h1>Where is Weekend for Good this year?</h1>
+        <h3>Where is <span class="weekend-for-good-name">Weekend for Good</span> this year?</h3>
         <strong class="location-name">@location.Name</strong><br />
         @location.AddressLine1<br />
         @location.City, @location.State @location.PostalCode<br />
