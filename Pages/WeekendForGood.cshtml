@@ -8,25 +8,23 @@
 }
 <div id="weekend-for-good-page">
     <div class="hero-banner">
-        <div class="wfg-banner">
-            <div class="wfg-box">
-                <div class="wfg">
-                    WFG
-                </div>
-            </div>
-            <div class="wfg-title">
-                <h1>
-                    Weekend<br />
-                    for <span class="the-word-good">Good</span>
-                </h1>
-            </div>
-        </div>
+        <img src="https://grgivecamp.org/assets/WFG-horizontal-logo.png" alt="WFG | Weekend for Good" />
     </div>
     <div class="date-banner">
         @($"{dateRange.From:MMM. d} - {dateRange.To:d yyyy}")
     </div>
     <div class="partnership-banner">
-        <img src="https://grgivecamp.org/assets/partnership.png" alt="Placeholder" />
+        <div class="layout-wrapper">
+            <div class="code-for-good-logo">
+                <img src="https://grgivecamp.org/assets/CFG-horizontal-logo.png" alt="Code for Good West Michigan" />
+            </div>
+            <div class="plus-icon">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="aiga-wm-logo">
+                <img src="https://grgivecamp.org/assets/aiga-wm-logo.png" alt="AIGA West Michigan" />
+            </div>
+        </div>
     </div>
     <div class="what-is-code-for-good">
         <div class="photo-block">
@@ -67,15 +65,15 @@
         </div>
         <div class="button-block">
             <div class="icon-stack">
-                <img src="https://grgivecamp.org/assets/non-profit-icon.png"  alt="Apply to be a Non-Profit that we help"/>
+                <img src="https://grgivecamp.org/assets/non-profit-icon.png" alt="Apply to be a Non-Profit that we help" />
                 <h3 class="call-out-text">Can you help my non-profit?</h3>
             </div>
             <a class="button" asp-page="./NonprofitAgencies">Apply</a>
         </div>
     </div>
     <div class="location-address">
-        <h1>Location</h1>
-        <strong>@location.Name</strong><br />
+        <h1>Where is Weekend for Good this year?</h1>
+        <strong class="location-name">@location.Name</strong><br />
         @location.AddressLine1<br />
         @location.City, @location.State @location.PostalCode<br />
         <p>
