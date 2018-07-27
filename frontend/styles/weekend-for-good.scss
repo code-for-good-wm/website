@@ -141,7 +141,7 @@
     }
 
     .partnership-banner {
-      padding: 2rem;
+      padding: 4rem 2rem;
 
       .layout-wrapper {
         padding: 1rem 0;
@@ -149,9 +149,11 @@
         text-align: center;
       }
 
+
       .plus-icon {
         display: block;
         text-align: center;
+        font-size: larger;
       }
 
       .code-for-good-logo, .plus-icon, .aiga-wm-logo {
@@ -176,13 +178,8 @@
 
     .button-block {
       width: 100%;
-      padding: 2rem;
       margin: 1rem;
       border: 1px solid $color-brand-dark;
-
-      .button {
-        width: 100%;
-      }
     }
   }
 }
@@ -199,7 +196,14 @@
     }
 
     .partnership-banner {
-      padding: 1rem;
+      padding: 4rem 2rem;
+
+      .plus-icon {
+        .plus-text {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+      }
     }
 
     .what-is-code-for-good, .what-is-weekend-for-good {
