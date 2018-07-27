@@ -96,6 +96,10 @@ html, body {
   }
 }
 
+.keep-together {
+  white-space: nowrap;
+}
+
 .circuit-left {
   position: absolute;
   max-height: 150px;
