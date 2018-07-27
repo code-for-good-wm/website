@@ -1,10 +1,19 @@
 ﻿@page
+@using Microsoft.AspNetCore.Http
 @model codeforgood.Pages.WeekendForGoodModel
 @{
     ViewData["Title"] = "Weekend For Good";
 
     var dateRange = Model.DateRange;
     var location = Model.LocationAddress;
+
+    var queryArgs = new QueryString()
+        .Add("daddr", $"{location.Name}, {location.AddressLine1}, {location.City}, {location.State} {location.PostalCode}");
+
+    var directionsUrl = new UriBuilder("https://maps.google.com/")
+    {
+        Query = queryArgs.ToString()
+    };
 }
 <div id="weekend-for-good-page">
     <div class="hero-banner">
@@ -19,13 +28,13 @@
         </div>
         <div class="layout-wrapper">
             <div class="code-for-good-logo">
-                <img src="https://grgivecamp.org/assets/CFG-horizontal-logo.png" alt="Code for Good West Michigan"/>
+                <img src="https://grgivecamp.org/assets/CFG-horizontal-logo.png" alt="Code for Good West Michigan" />
             </div>
             <div class="plus-icon">
                 <span class="plus-text">+</span>
             </div>
             <div class="aiga-wm-logo">
-                <img src="https://grgivecamp.org/assets/aiga-wm-logo.png" alt="AIGA West Michigan"/>
+                <img src="https://grgivecamp.org/assets/aiga-wm-logo.png" alt="AIGA West Michigan" />
             </div>
         </div>
     </div>
@@ -76,11 +85,13 @@
     </div>
     <div class="location-address">
         <h3>Where is <span class="weekend-for-good-name">Weekend for Good</span> this year?</h3>
-        <strong class="location-name">@location.Name</strong><br />
-        @location.AddressLine1<br />
-        @location.City, @location.State @location.PostalCode<br />
+        <div vocab="http://schema.org/" typeof="PostalAddress">
+            <strong class="location-name">@location.Name</strong><br />
+            <span property="streetAddress">@location.AddressLine1</span><br />
+            <span property="addressLocality">@location.City</span>, <span property="addressRegion">@location.State</span> <span property="postalCode">@location.PostalCode</span><br />
+        </div>
         <p>
-            <a href="https://www.google.com/maps/dir/''/Start+Garden,+40+Pearl+St+NW+%23200,+Grand+Rapids,+MI+49503"><i class="fas fa-map-marker"></i> Directions</a>
+            <a href="@directionsUrl"><i class="fas fa-map-marker"></i> Directions</a>
         </p>
     </div>
 </div>
