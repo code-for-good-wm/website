@@ -6,6 +6,7 @@
         NonProfit,
         Volunteer,
         Info,
+		Sponsorship,
         NoReply
     }
 }

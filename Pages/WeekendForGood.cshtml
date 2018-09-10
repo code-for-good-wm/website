@@ -6,21 +6,14 @@
 
     var dateRange = Model.DateRange;
     var location = Model.LocationAddress;
-
-    var queryArgs = new QueryString()
-        .Add("daddr", $"{location.Name}, {location.AddressLine1}, {location.City}, {location.State} {location.PostalCode}");
-
-    var directionsUrl = new UriBuilder("https://maps.google.com/")
-    {
-        Query = queryArgs.ToString()
-    };
 }
-<div id="weekend-for-good-page">
+<div id="weekend-for-good-page" vocab="http://schema.org/" typeof="Event">
     <div class="hero-banner">
-        <img src="https://grgivecamp.org/assets/WFG-horizontal-logo.png" alt="WFG | Weekend for Good" />
+        <h1 class="weekend-for-good-title" property="name">Weekend for Good</h1>
+        <img src="https://grgivecamp.org/assets/WFG-horizontal-logo.png" alt="WFG | Weekend for Good"/>
     </div>
     <div class="date-banner">
-        @($"{dateRange.From:MMM. d} - {dateRange.To:d yyyy}")
+        <span property="startDate" content="@dateRange.From.ToString("s")">@($"{dateRange.From:MMM. d}")</span> - <span property="endDate" content="@dateRange.To.ToString("s")">@($"{dateRange.To:d yyyy}")</span>
     </div>
     <div class="partnership-banner">
         <div class="a-partnership-with">
@@ -45,7 +38,7 @@
         <div class="text-block">
             <h2>What is <span class="weekend-for-good-name">Code for Good</span>?</h2>
             <p>
-                We’re a volunteer-run collective of technology professionals in Grand Rapids, Michigan, dedicated to creating tech solutions for <span class="keep-together">non-profit</span> agencies.
+                We’re a volunteer-run collective of technology professionals in <span class="keep-together">Grand Rapids, Michigan</span>, dedicated to creating tech solutions for <span class="keep-together">non-profit</span> agencies.
             </p>
             <p>
                 Our primary event is <strong class="keep-together">Weekend for Good</strong> in November, but we are involved with projects all year long.
@@ -60,8 +53,8 @@
         <div class="text-block">
             <h2>Ok, What is <span class="weekend-for-good-name">Weekend for Good</span>?</h2>
             <p><span class="weekend-for-good-name">Weekend for Good</span> is an event held in collaboration with <a class="keep-together" href="https://westmichigan.aiga.org/">AIGA West Michigan</a>.</p>
-            <p> On <strong>@dateRange</strong>, volunteers who are experts in software development, design and other fields donate their time to non-profits, creating custom software to further their charitable missions.</p>
-            <p>In turn, those non-profits create meaningful change here in Grand Rapids and around the globe.</p>
+            <p> On <strong>@dateRange</strong>, volunteers who are experts in software development, design and other fields donate their time to <span class="keep-together">non-profits</span>, creating custom software to further their charitable missions.</p>
+            <p>In turn, those <span class="keep-together">non-profits</span> create meaningful change here in <span class="keep-together">Grand Rapids</span> and around the globe.</p>
         </div>
         <div class="photo-block">
             <img src="https://grgivecamp.org/assets/photo-collage-2.png" alt="Photo Collage" />
@@ -83,15 +76,15 @@
             <a class="button" asp-page="./NonprofitAgencies">Apply</a>
         </div>
     </div>
-    <div class="location-address">
-        <h3>Where is <span class="weekend-for-good-name">Weekend for Good</span> this year?</h3>
+    <div class="location-address" property="location" typeof="Place">
+        <h3>Where is <span class="weekend-for-good-name">Weekend for Good</span> <span class="keep-together">this year</span>?</h3>
+        <strong property="name" class="location-name">@location.Name</strong>
         <div vocab="http://schema.org/" typeof="PostalAddress">
-            <strong class="location-name">@location.Name</strong><br />
             <span property="streetAddress">@location.AddressLine1</span><br />
             <span property="addressLocality">@location.City</span>, <span property="addressRegion">@location.State</span> <span property="postalCode">@location.PostalCode</span><br />
         </div>
         <p>
-            <a href="@directionsUrl"><i class="fas fa-map-marker"></i> Directions</a>
+            <a href="@location.GoogleMapsLink()"><i class="fas fa-map-marker"></i> Directions</a>
         </p>
     </div>
 </div>

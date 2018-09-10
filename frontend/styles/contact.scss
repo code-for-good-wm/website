@@ -15,12 +15,42 @@
 
   form {
 
-    textarea {
+    fieldset {
+      color: $bg-color-medium;
+      padding: 1rem;
+
+      legend {
+        padding: 0.25rem;
+        color: $color-dark-font;
+      }
+    }
+
+    .contact-fields {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .field-group {
+        width: 50%;
+        padding-right: 0.5rem;
+
+        @media(max-width: 600px) {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+    }
+
+
+
+    input, textarea {
       width: 100%;
+      padding: 0.5rem;
     }
 
     button {
       @extend .dark-button;
+      padding: 1rem 3rem;
     }
   }
 

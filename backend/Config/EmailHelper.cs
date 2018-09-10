@@ -1,5 +1,8 @@
 ﻿using System.Net.Mail;
 
+using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 namespace CodeForGood.Config
 {
     public static class EmailHelper
@@ -16,11 +19,20 @@ namespace CodeForGood.Config
                     return new MailAddress($"volunteer{MailDomain}", "Code for Good Volunteer Information");
                 case TeamEmail.Info:
                     return new MailAddress($"info{MailDomain}", "Code for Good Information");
+	            case TeamEmail.Sponsorship:
+		            return new MailAddress($"sponsor{MailDomain}", "Code for Good Sponsorship");
                 case TeamEmail.NoReply:
                     return new MailAddress($"no-reply{MailDomain}", "No Reply");
                 default:
                     return new MailAddress($"admin{MailDomain}", "Code for Good Admin");
             }
         }
+
+	    public static IHtmlContent MailToLink(this TeamEmail email)
+	    {
+			var mailAddress = email.ToMailAddress();
+
+		    return new HtmlString($"<a href=\"mailto:{mailAddress.Address}\" property=\"email\">{mailAddress.Address}</a>");
+	    }
     }
 }

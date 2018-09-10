@@ -1,53 +1,86 @@
 ﻿@page
+@using Config
 @model ContactModel
 @{
     ViewData["Title"] = "Contact Us";
 }
 <div id="contact-page">
-    <img class="circuit-left" src="~/assets/Circuits@2x.png" />
-    <img class="circuit-right" src="~/assets/Circuits@2x.png" />
+    <img class="circuit-left" src="~/assets/Circuits@2x.png" alt="" />
+    <img class="circuit-right" src="~/assets/Circuits@2x.png" alt="" />
     <div class="contact-info-block">
         <h1>Contact Us</h1>
         <form asp-page="Contact" method="post">
-            <label for="type">What are you contacting us about?</label>
-            <select id="type" name="type">
-                <option value="Volunteer">I'm interested in helping out</option>
-                <option value="NonProfit">I need your help</option>
-                <option value="Info">I have questions</option>
-                <option value="Info">I have answers</option>
-                <option value="Info">Something else?</option>
-            </select>
-            <label for="type">What's your message?</label>
-            <textarea id="message" name="message" rows="12"></textarea>
-            <button type="submit">
-                <i class="fas fa-envelope"></i> Send
-            </button>
+            <fieldset>
+                <legend>How can we reach you?</legend>
+                <div class="contact-fields">
+                    <div class="field-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="field-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" name="organization" />
+                    </div>
+                    <div class="field-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="field-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="phone" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>What's your message?</legend>
+                <label for="type">What are you contacting us about?</label>
+                <select id="type" name="type" autofocus>
+                    <option value="@TeamEmail.Volunteer.ToString()">I'm interested in helping out</option>
+                    <option value="@TeamEmail.NonProfit.ToString()">I need your help</option>
+                    <option value="@TeamEmail.Sponsorship.ToString()">I want to sponsor Code for Good</option>
+                    <option value="@TeamEmail.Info.ToString()">I have questions</option>
+                    <option value="@TeamEmail.Info.ToString()">I have answers</option>
+                    <option value="@TeamEmail.Info.ToString()">Something else?</option>
+                </select>
+                <label for="type">What's your message?</label>
+                <textarea id="message" name="message" rows="12"></textarea>
+
+                <button type="submit">
+                    <i class="fas fa-envelope"></i> Send
+                </button>
+            </fieldset>
         </form>
     </div>
 
     <ul class="email-contact-list">
         <li>
-            <address>
-                <strong>President</strong><br />
-                <em>Sarah Titus</em> - <a href="mailto:sarah@sarahautumndesigns.com">sarah@sarahautumndesigns.com</a>
+            <address vocab="http://schema.org/" typeof="Person">
+                <strong property="jobTitle">President</strong><br />
+                <em property="name">Sarah Titus</em> - <a href="mailto:sarah@sarahautumndesigns.com" property="email">sarah@sarahautumndesigns.com</a>
             </address>
         </li>
         <li>
-            <address>
-                <strong>Information</strong><br />
-                <a href="mailto:info@codeforgoodwm.org">info@codeforgoodwm.org</a>
+            <address vocab="http://schema.org/" typeof="Person">
+                <strong property="jobTitle">Information</strong><br />
+                @TeamEmail.Info.MailToLink()
             </address>
         </li>
         <li>
-            <address>
-                <strong>Volunteer Coordinator</strong><br />
-                <a href="mailto:volunteer@codeforgoodwm.org">volunteer@codeforgoodwm.org</a>
+            <address vocab="http://schema.org/" typeof="Person">
+                <strong property="jobTitle">Sponsorship</strong><br />
+                @TeamEmail.Sponsorship.MailToLink()
             </address>
         </li>
         <li>
-            <address>
-                <strong>Non-Profit Coordinator</strong><br />
-                <a href="mailto:nonprofit@codeforgoodwm.org">nonprofit@codeforgoodwm.org</a>
+            <address vocab="http://schema.org/" typeof="Person">
+                <strong property="jobTitle">Volunteer Coordinator</strong><br />
+                @TeamEmail.Volunteer.MailToLink()
+            </address>
+        </li>
+        <li>
+            <address vocab="http://schema.org/" typeof="Person">
+                <strong property="jobTitle">Non-Profit Coordinator</strong><br />
+                @TeamEmail.NonProfit.MailToLink()
             </address>
         </li>
     </ul>
