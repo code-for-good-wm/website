@@ -20,6 +20,12 @@
         <None Include="web.config" CopyToPublishDirectory="Always" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\assets\CFG-LOGO_Reversed.svg">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

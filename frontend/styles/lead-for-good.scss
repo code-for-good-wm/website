@@ -1,0 +1,119 @@
+﻿#lead-for-good-page {
+  @extend .page-container;
+
+  .lead-for-good-title{
+    display: none;
+  }
+  
+  .hero-banner {
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .photo-block {
+    width: 40%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text-block {
+    width: 60%;
+    padding: 5rem;
+
+    h2 {
+      @extend .type-bold;
+      font-size: 1.8rem;
+    }
+  }
+
+  .what-is-code-for-good,
+  .what-is-lead-for-good,
+  .call-to-action-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .what-is-code-for-good {
+    .text-block {
+      border-top: 2rem solid $color-value-4;
+    }
+  }
+
+  .location-address {
+    font-weight: bold;
+    padding: 1rem 1rem 2rem;
+  }
+
+  .lead-for-good-name {
+    white-space: nowrap;
+  }
+
+  .event-schedule {
+     li {
+       list-style: none;
+       font-size: larger;
+     }
+  }
+}
+
+@media (max-width: #{map-get($breakpoints, md)}) {
+  #lead-for-good-page {
+    .hero-banner {
+      img {
+        width: 90%;
+      }
+    }
+
+    .what-is-code-for-good,
+    .what-is-lead-for-good {
+      .text-block {
+        border-top: none;
+      }
+    }
+
+    .photo-block {
+      width: 100%;
+    }
+
+    .text-block {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+}
+
+@media (min-width: #{map-get($breakpoints, md)}) and (max-width: #{map-get($breakpoints, lg)}) {
+  #lead-for-good-page {
+    .hero-banner {
+      img {
+        width: 80%;
+      }
+    }
+
+    .what-is-code-for-good,
+    .what-is-lead-for-good {
+      .text-block {
+        border-top: none;
+      }
+    }
+
+    .photo-block {
+      width: 50%;
+      background-color: $color-brand-accent;
+    }
+
+    .text-block {
+      width: 50%;
+      padding: 2rem;
+    }
+
+    .lead-for-good-name {
+      white-space: normal;
+    }
+  }
+}

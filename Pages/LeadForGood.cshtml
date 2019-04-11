@@ -1,0 +1,87 @@
+﻿@page
+@model codeforgood.Pages.LeadForGoodModel
+@{
+    ViewData["Title"] = "Lead For Good";
+
+    var dateRange = Model.DateRange;
+    var location = Model.LocationAddress;
+}
+<div id="lead-for-good-page" vocab="http://schema.org/" typeof="Event">
+    <div class="hero-banner">
+        <h1 class="lead-for-good-title" property="name">Lead for Good</h1>
+        <span property="startDate" content="@dateRange.From.ToString("s")"></span>
+        <span property="endDate" content="@dateRange.To.ToString("s")"></span>
+        <img src="https://grgivecamp.org/assets/lead-for-good.jpg" alt="LFG | Lead for Good" />
+    </div>
+
+    <div class="what-is-code-for-good">
+        <div class="text-block">
+            <p>
+                <strong>Lead for Good: Building a Cohesive Team</strong> - A moderated panel about leading diverse teams and how to amplify these differences in cohesive ways.
+            </p>
+            <p>
+                <span class="lead-for-good-name">Code for Good West Michigan</span> is diving into a new venture this year: <span class="lead-for-good-name">LEAD FOR GOOD!</span>
+            </p>
+            <a class="link-button dark-button" href="https://www.eventbrite.com/e/lead-for-good-building-a-cohesive-team-registration-59867876430">Sign Up!</a>
+        </div>
+        <div class="photo-block">
+            <img src="https://grgivecamp.org/assets/lead-for-good-2.jpg" alt="Photo Collage" />
+        </div>
+    </div>
+    <div class="what-is-lead-for-good">
+        <div class="photo-block">
+            <img src="https://grgivecamp.org/assets/lead-for-good-3.jpg" alt="Photo Collage" />
+        </div>
+        <div class="text-block">
+            <p>
+                While "code" is in our name, our reach extends <strong>far beyond</strong> coding: we support our community through tech and design, strategy, and human-centered solutions of all stripes, and we feel that excellent leadership is a fundamental building block in doing all good work well.
+            </p>
+            <p>
+                Each <span class="lead-for-good-name">Lead for Good</span> panel discussion will explore a different facet of leadership.
+                These sessions give <stong>both</stong> rising and experienced leaders opportunities to share insight, practice, and
+                new perspectives on what it means to <strong>lead in our community</strong>.
+            </p>
+            <p>
+                Our very first event, <span class="lead-for-good-name">Lead for Good:</span> <span class="lead-for-good-name">
+                    Building a Cohesive Team
+                </span>, will invite panelists to share
+                about their experience leading teams with diverse personalities, skills, and work styles, and how
+                to amplify those differences in cohesive, successful ways!
+            </p>
+            <p>
+                This moderated event will be free and open to the public.
+            </p>
+            <h4>
+                Panel attendees and info will be released very soon!
+            </h4>
+        </div>
+    </div>
+    <div class="what-is-code-for-good">
+        <div class="text-block">
+            <h1>
+                <strong>Lead for Good:</strong><br />
+                <small>Building a Cohesive Team</small>
+            </h1>
+            <ul class="event-schedule">
+                <li><strong>6:00-6:30</strong>: Appetizers + Mingling</li>
+                <li><strong>6:30-7:30</strong>: Panel Presentation</li>
+                <li><strong>7:30-8:00</strong>: Panelist Questions + Networking</li>
+            </ul>
+            <div class="location-address" property="location" typeof="Place">
+                <strong property="name" class="location-name">@location.Name</strong>
+                <div vocab="http://schema.org/" typeof="PostalAddress">
+                    <span property="streetAddress">@location.AddressLine1</span><br />
+                    <span property="addressLocality">@location.City</span>, <span property="addressRegion">@location.State</span> <span property="postalCode">@location.PostalCode</span><br />
+                </div>
+                <p>
+                    <a href="@location.GoogleMapsLink()"><i class="fas fa-map-marker"></i> Directions</a>
+                </p>
+            </div>
+
+            <a class="link-button dark-button" href="https://www.eventbrite.com/e/lead-for-good-building-a-cohesive-team-registration-59867876430">Sign Up!</a>
+        </div>
+        <div class="photo-block">
+            <img src="https://grgivecamp.org/assets/lead-for-good-4.jpg" alt="Photo Collage" />
+        </div>
+    </div>
+</div>

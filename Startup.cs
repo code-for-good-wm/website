@@ -38,6 +38,7 @@ namespace CodeForGood
 	                conventions.AddPageRoute("/GRGiveCamp", "gr-give-camp");
 	                conventions.AddPageRoute("/NonprofitAgencies", "nonprofit-agencies");
 					conventions.AddPageRoute("/WeekendForGood", "weekend-for-good");
+	                conventions.AddPageRoute("/LeadForGood", "lead-for-good");
                 });
 
 

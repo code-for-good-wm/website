@@ -76,15 +76,4 @@
             <a class="button" asp-page="./NonprofitAgencies">Apply</a>
         </div>
     </div>
-    <div class="location-address" property="location" typeof="Place">
-        <h3>Where is <span class="weekend-for-good-name">Weekend for Good</span> <span class="keep-together">this year</span>?</h3>
-        <strong property="name" class="location-name">@location.Name</strong>
-        <div vocab="http://schema.org/" typeof="PostalAddress">
-            <span property="streetAddress">@location.AddressLine1</span><br />
-            <span property="addressLocality">@location.City</span>, <span property="addressRegion">@location.State</span> <span property="postalCode">@location.PostalCode</span><br />
-        </div>
-        <p>
-            <a href="@location.GoogleMapsLink()"><i class="fas fa-map-marker"></i> Directions</a>
-        </p>
-    </div>
 </div>

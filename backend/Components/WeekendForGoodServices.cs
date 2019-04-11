@@ -6,8 +6,8 @@ namespace CodeForGood.Components
     {
         public static DateRange WhenIsWeekendForGood()
         {
-			const string startDate = "November 2, 2018";
-            const string endDate = "November 4, 2018";
+			const string startDate = "November 1, 2019";
+            const string endDate = "November 3, 2019";
 
             var gmtOffset = TimeSpan.FromHours(-5);
 
@@ -17,6 +17,20 @@ namespace CodeForGood.Components
                 To = new DateTimeOffset(DateTime.Parse(endDate), gmtOffset)
             };
         }
+
+	    public static DateRange WhenIsLeadForGood()
+	    {
+		    const string startDate = "May 2, 2018 6:00pm";
+		    const string endDate = "May 2, 2018 8:00pm";
+
+		    var gmtOffset = TimeSpan.FromHours(-5);
+
+		    return new DateRange
+		    {
+			    From = new DateTimeOffset(DateTime.Parse(startDate), gmtOffset),
+			    To = new DateTimeOffset(DateTime.Parse(endDate), gmtOffset)
+		    };
+	    }
 
         public static LocationAddress WhereIsWeekendForGood()
         {
