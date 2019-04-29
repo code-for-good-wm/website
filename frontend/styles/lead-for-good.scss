@@ -1,15 +1,27 @@
 ﻿#lead-for-good-page {
   @extend .page-container;
 
-  .lead-for-good-title{
+  .lead-for-good-title {
     display: none;
   }
-  
+
   .hero-banner {
     text-align: center;
 
     img {
       width: 100%;
+    }
+  }
+
+  .register-block {
+    border-top: 2px solid $bg-color-medium;
+    border-bottom: 1px solid $color-brand-accent;
+    padding: 2rem;
+    background-color: $bg-color-light;
+    text-align: center;
+
+    a {
+      font-size: larger;
     }
   }
 
@@ -40,13 +52,21 @@
 
   .what-is-code-for-good {
     .text-block {
-      border-top: 2rem solid $color-value-4;
+      border-top: 2rem solid $color-brand-dark;
     }
   }
 
   .location-address {
     font-weight: bold;
     padding: 1rem 1rem 2rem;
+
+    a {
+      color: $color-brand-accent;
+
+      &:hover, &:focus {
+        color: $color-brand-accent-hover;
+      }
+    }
   }
 
   .lead-for-good-name {
@@ -54,10 +74,27 @@
   }
 
   .event-schedule {
-     li {
-       list-style: none;
-       font-size: larger;
-     }
+    li {
+      list-style: none;
+      font-size: larger;
+    }
+  }
+
+  .sponsor-block {
+    text-align: center;
+
+    .our-sponsors {
+      display: flex;
+
+      a {
+        display: block;
+        width: 50%;
+
+        img {
+          max-height: 100px;
+        }
+      }
+    }
   }
 }
 
@@ -65,12 +102,19 @@
   #lead-for-good-page {
     .hero-banner {
       img {
-        width: 90%;
+        width: 100%;
       }
+    }
+
+
+
+    .what-is-code-for-good {
+      flex-direction: column-reverse;
     }
 
     .what-is-code-for-good,
     .what-is-lead-for-good {
+
       .text-block {
         border-top: none;
       }
@@ -91,7 +135,7 @@
   #lead-for-good-page {
     .hero-banner {
       img {
-        width: 80%;
+        width: 100%;
       }
     }
 
@@ -104,12 +148,13 @@
 
     .photo-block {
       width: 50%;
-      background-color: $color-brand-accent;
+      background-color: $bg-color-light;
     }
 
     .text-block {
       width: 50%;
       padding: 2rem;
+      font-size: smaller;
     }
 
     .lead-for-good-name {

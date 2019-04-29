@@ -1,15 +1,25 @@
 ﻿@page
 @model IndexModel
 <div id="home-page">
-    <section class="hero">
+    @*<section class="hero">
         <div class="hero-overlay">
             <div class="cta-message">
                 <h2>Proudly giving to those who give!</h2>
                 <a class="join-us-button" asp-page="./Volunteer">Volunteer</a>
             </div>
         </div>
+    </section>*@
+    <section class="lead-for-good">
+        <div class="hero-banner">
+            <h1 class="lead-for-good-title" property="name">Lead for Good</h1>
+            <img src="https://grgivecamp.org/assets/lead-for-good.jpg" alt="LFG | Lead for Good" />
+        </div>
+        <div class="register-block">
+            <a class="link-button accent-button" href="https://www.eventbrite.com/e/lead-for-good-building-a-cohesive-team-registration-59867876430?ref=ebtnebregn" target="_blank">Register Now</a>
+        </div>
     </section>
     <section class="content">
+
         <div class="what-is-code-for-good">
             <div class="wrapper">
                 <div class="text-block">
@@ -33,7 +43,7 @@
             </div>
         </div>
         <div class="working-together">
-            <img src="~/assets/working-together.jpg" alt="Working Together" />
+            <img src="~/assets/working-together.jpg" alt="Working Together"/>
         </div>
         <div class="what-is-weekend-for-good">
             <div class="wrapper">

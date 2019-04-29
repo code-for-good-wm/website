@@ -63,6 +63,21 @@ html, body {
   }
 }
 
+.accent-button {
+  @extend .link-button;
+  background-color: $color-brand-accent;
+  color: $color-white;
+  border: none;
+  transition: background-color 125ms;
+  font-size: 1rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-brand-accent-hover;
+  }
+}
+
 .link {
   color: $color-brand-dark;
   text-decoration: underline;

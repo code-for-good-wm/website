@@ -3,6 +3,33 @@ $utilitybar-height: rem(60px);
 #home-page {
   @extend .page-container;
 
+  .lead-for-good {
+
+    .lead-for-good-title {
+      display: none;
+    }
+
+    .hero-banner {
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .register-block {
+      border-top: 2px solid $bg-color-medium;
+      border-bottom: 1px solid $color-brand-accent;
+      padding: 2rem;
+      background-color: $bg-color-light;
+      text-align: center;
+
+      a {
+        font-size: larger;
+      }
+    }
+  }
+
   .hero {
     background-image: url("/assets/homepage-hero-full.jpg");
     background-size: cover;
